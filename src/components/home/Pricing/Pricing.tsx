@@ -5,7 +5,8 @@ import styles from "./Pricing.module.css";
 const plans = [
   {
     name: "Basic Plan",
-    price: "$500",
+    price: "500",
+    customPrice: false,
     unit: "/sqft, Starting from",
     desc: "Perfect for small residential construction projects.",
     features: [
@@ -15,11 +16,12 @@ const plans = [
       "On-Time Project Delivery",
       "100% Guaranteed Work",
     ],
-    featured: false,
+    btn: "Get Quote",
   },
   {
     name: "Stander plan",
-    price: "$800",
+    price: "800",
+    customPrice: false,
     unit: "/sqft, Starting from",
     desc: "Ideal for full residential building construction.",
     features: [
@@ -29,12 +31,13 @@ const plans = [
       "Project Management",
       "100% Guaranteed Work",
     ],
-    featured: true,
+    btn: "Get Quote",
   },
   {
     name: "Premium Plan",
-    price: "Custom",
-    unit: "Pricing",
+    price: "",
+    customPrice: true,
+    unit: "",
     desc: "Best for commercial & custom construction projects.",
     features: [
       "Full Project Planning",
@@ -43,13 +46,13 @@ const plans = [
       "Dedicated Project Manager",
       "100% Guaranteed Work",
     ],
-    featured: false,
+    btn: "Request Estimate",
   },
 ];
 
 export default function Pricing() {
   return (
-    <section className={styles.section}>
+    <section className={styles.pricing} id="pricing">
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">Pricing plan</div>
@@ -58,35 +61,65 @@ export default function Pricing() {
             text={"We are offering the best\npricing to help you!"}
           />
         </div>
-        <div className={styles.grid}>
-          {plans.map((plan) => (
-            <article
-              key={plan.name}
-              className={`${styles.card} ${plan.featured ? styles.featured : ""}`}
-            >
-              <div className={styles.icon}>
-                <span className="icon-premium" />
+
+        <div className={styles.inner}>
+          <div className={styles.row}>
+            {plans.map((plan) => (
+              <div key={plan.name} className={styles.col}>
+                <div className={styles.single}>
+                  <div className={styles.icon}>
+                    <span className="icon-premium" />
+                  </div>
+                  <div className={styles.singleInner}>
+                    <div className={styles.singleShape}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/assets/images/pricing/pricing-one-single-shape-1.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className={styles.content}>
+                      <div className={styles.packName}>
+                        <p>{plan.name}</p>
+                      </div>
+                      <h3 className={styles.priceBox}>
+                        {plan.customPrice ? (
+                          "Custom Pricing"
+                        ) : (
+                          <>
+                            <span className={styles.dolar}>$</span>
+                            {plan.price}
+                            <span className={styles.validity}>{plan.unit}</span>
+                          </>
+                        )}
+                      </h3>
+                      <p className={styles.text}>{plan.desc}</p>
+                    </div>
+                    <div className={styles.pointsBox}>
+                      <ul className={styles.points}>
+                        {plan.features.map((f) => (
+                          <li key={f}>
+                            <div className={styles.pointIcon}>
+                              <span className="icon-check" />
+                            </div>
+                            <div className={styles.pointText}>
+                              <p>{f}</p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className={styles.btnBox}>
+                      <Link href="/contact" className="thmBtn">
+                        <span className="thmBtnText">{plan.btn}</span>
+                        <span className="btnIcon icon-right-arrow" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3>{plan.name}</h3>
-              <div className={styles.price}>
-                <strong>{plan.price}</strong>
-                <span>{plan.unit}</span>
-              </div>
-              <p className={styles.desc}>{plan.desc}</p>
-              <ul>
-                {plan.features.map((f) => (
-                  <li key={f}>
-                    <span className="icon-check" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <Link href="#contact" className="thmBtn">
-                Get Quote
-                <span className="btnIcon icon-right-arrow" />
-              </Link>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

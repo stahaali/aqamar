@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   min-height: 100vh;
-  height: 100vh;
-  padding: 160px 0 40px;
+  height: auto;
+  padding: 160px 0 60px;
   background-color: var(--builza-black);
   overflow: hidden;
   z-index: 5;
@@ -27,22 +27,23 @@
 
 .inner {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  justify-content: space-between;
   gap: 40px;
   width: 100%;
 }
 
-/* LEFT */
+/* LEFT — defines the row height */
 .left {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 3;
-  flex: 0 1 54%;
-  max-width: 700px;
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 0;
 }
 
 .titleBox {
@@ -69,17 +70,21 @@
 
 .title {
   position: relative;
-  font-size: 48px;
+  font-size: 42px;
   color: var(--builza-white);
   font-weight: 700;
-  line-height: 1.2em;
-  text-transform: capitalize;
+  line-height: 1.18em;
   margin-top: 24px;
   margin-bottom: 0;
   font-family: var(--builza-font-two);
 }
 
-.title span {
+.line {
+  display: block;
+  white-space: nowrap;
+}
+
+.accent {
   color: var(--builza-base);
 }
 
@@ -92,7 +97,7 @@
   margin-top: 20px;
   margin-bottom: 44px;
   line-height: 1.7;
-  max-width: 560px;
+  max-width: 100%;
 }
 
 .btnRow {
@@ -181,12 +186,11 @@
 @media only screen and (min-width: 1920px) {
   .banner {
     min-height: 100vh;
-    height: 100vh;
-    padding: 160px 0 40px;
+    height: auto;
+    padding: 160px 0 60px;
   }
 
   .left {
-    max-width: 700px;
     margin-right: 0;
   }
 
@@ -199,15 +203,19 @@
   }
 
   .title {
-    font-size: 70px;
+    font-size: 52px;
     font-weight: 700;
-    line-height: 1.2em;
-    text-transform: capitalize;
+    line-height: 1.12em;
     margin-top: 24px;
     color: var(--builza-white);
   }
 
-  .title span {
+  .title .line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .accent {
     color: var(--builza-base);
   }
 
@@ -217,7 +225,7 @@
     color: rgba(255, 255, 255, 0.8);
     margin-top: 20px;
     margin-bottom: 44px;
-    max-width: 620px;
+    max-width: 100%;
     line-height: 1.7;
   }
 
@@ -236,62 +244,40 @@
     color: var(--builza-base);
     font-weight: 700;
   }
-
-  .right {
-    bottom: auto;
-    right: auto;
-  }
-
-  .img {
-    width: 100%;
-  }
-
-  .img > img {
-    max-height: 110%;
-    height: 110%;
-  }
 }
 
-/* ===== RIGHT — height matches left content ===== */
+/* ===== RIGHT — equal width column ===== */
 .right {
   position: relative;
-  bottom: auto;
-  right: auto;
-  flex: 0 1 46%;
-  display: flex;
-  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  align-self: stretch;
   min-height: 0;
 }
 
 .imgBox {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: flex-end;
-  justify-content: center;
+  position: absolute;
+  inset: 0;
+  display: block;
 }
 
 .img {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
 }
 
 .img > img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   width: auto;
+  height: 100%;
   max-width: 100%;
-  height: 110%;
-  max-height: 110%;
   object-fit: contain;
   object-position: bottom center;
   display: block;
-  margin-bottom: -40px;
   animation: topBottom 3s ease-in-out infinite;
 }
 
@@ -508,10 +494,10 @@
 @keyframes topBottom {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateX(-50%) translateY(-4px);
   }
 }
 
@@ -529,7 +515,7 @@
 /* Responsive — match Builza breakpoints */
 @media only screen and (min-width: 1200px) and (max-width: 1319px) {
   .title {
-    font-size: 60px;
+    font-size: 38px;
   }
 }
 
@@ -541,11 +527,21 @@
   .pointSingle {
     max-width: 260px;
   }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .img > img {
+    height: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .title {
-    font-size: 50px;
+    font-size: 34px;
   }
 }
 
@@ -557,38 +553,36 @@
   }
 
   .inner {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: stretch;
   }
 
   .right {
     position: relative;
-    bottom: auto;
-    right: auto;
     margin-top: 30px;
-    flex: none;
     width: 100%;
-    height: auto;
-    min-height: 380px;
+    max-width: 420px;
+    height: 380px;
+    justify-self: center;
   }
 
   .imgBox,
   .img {
-    height: 380px;
-    max-width: 420px;
-    margin: 0 auto;
+    position: absolute;
+    inset: 0;
   }
 
   .img > img {
     height: 100%;
     width: auto;
     max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .left {
     margin-right: 0;
     max-width: 100%;
-    flex: none;
   }
 
   .pointSingle.one {

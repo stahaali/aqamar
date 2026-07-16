@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--builza-bdr-radius);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ready .canvas {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.canvas :global(canvas) {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: var(--builza-bdr-radius);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--builza-bdr-radius);
+}
+
+.front {
+  position: relative;
+  z-index: 0;
+}
+
+.ready .front {
+  opacity: 0;
+  pointer-events: none;
+}

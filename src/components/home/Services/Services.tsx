@@ -12,34 +12,40 @@ import styles from "./Services.module.css";
 
 const services = [
   {
-    title: "Residential Construction",
+    title: "Architectural Design, Drawings & Engineering Services",
     img: "services-1-1.jpg",
     count: "01",
     icon: "icon-building-construction",
   },
   {
-    title: "Commercial Construction",
+    title: "New Homes, Plazas & Retail Space Design & Permits",
     img: "services-1-2.jpg",
     count: "02",
     icon: "icon-factory",
   },
   {
-    title: "Maintenance Services",
+    title: "2nd Unit, Below Grade Entrance, Sunroom, Deck",
     img: "services-1-3.jpg",
     count: "03",
     icon: "icon-building",
   },
   {
-    title: "Renovation & Remodeling",
+    title: "Insulated Concrete Forms Design & Construction",
     img: "services-1-4.jpg",
     count: "04",
     icon: "icon-housing",
   },
   {
-    title: "Interior & Exterior Works",
+    title: "Subgrade, Structural & Geo-Technical Engineering",
     img: "services-1-5.jpg",
     count: "05",
     icon: "icon-interior-design-1",
+  },
+  {
+    title: "We Provide Complete Project Design & Construction",
+    img: "services-1-2.jpg",
+    count: "06",
+    icon: "icon-building-construction",
   },
 ];
 
@@ -57,7 +63,7 @@ export default function Services() {
           <div className="sectionTag">Our Services</div>
           <AnimatedTitle
             className="sectionTitle"
-            text="Professional Construction Services"
+            text="Building Permits & Investments Opportunities"
           />
         </div>
 
@@ -86,11 +92,6 @@ export default function Services() {
                     Stylish interior and durable exterior solutions for
                     long-lasting results.
                   </p>
-                  <div className={styles.btnBox}>
-                    <Link href="#services">
-                      Read More <span className="icon-right-arrow" />
-                    </Link>
-                  </div>
                   <div className={styles.count}>{item.count}</div>
                 </div>
                 <div className={styles.imgBox}>

@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { IMG } from "@/lib/images";
 import styles from "./Banner.module.css";
 
 export default function Banner() {
@@ -9,7 +7,7 @@ export default function Banner() {
       <div
         className={styles.bg}
         style={{
-          backgroundImage: `url(${IMG}/backgrounds/banner-one-bg.jpg)`,
+          backgroundImage: `url(/assets/images/homebanner/homebanner.webp)`,
         }}
       />
 
@@ -21,17 +19,20 @@ export default function Banner() {
               <p>Building The Future</p>
             </div>
             <h2 className={styles.title}>
-              Strong Foundations,
-              <br />
-              Quality <span>Construction</span>
-              <br />
-              <span>&amp; Engineering</span>
+              <span className={styles.line}>Real Estate, Engineering</span>
+              <span className={styles.line}>
+                Services, Building Permits In
+              </span>
+              <span className={`${styles.line} ${styles.accent}`}>
+                Greater Toronto Area &amp;
+              </span>
+              <span className={`${styles.line} ${styles.accent}`}>
+                Engineering
+              </span>
             </h2>
           </div>
           <p className={styles.text}>
-            We deliver reliable construction solutions with modern technology,
-            skilled professionals, and a commitment to quality that ensures every
-            project is built to last.
+            Legal Basement, Sun Rooms, New Home or Addition, Commercial Units, Drawings & Building Permits.
           </p>
           <div className={styles.btnRow}>
             <div className={styles.btnBox}>

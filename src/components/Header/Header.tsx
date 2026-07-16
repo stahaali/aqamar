@@ -7,6 +7,7 @@ import styles from "./Header.module.css";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
   { label: "Portfolio", href: "/#projects" },
@@ -103,15 +104,15 @@ export default function Header() {
 
           <div className={styles.navRight}>
             <Link href="/contact" className="thmBtn">
-              Get A Quote
+              <span className="thmBtnText">Get A Quote</span>
               <span className="btnIcon icon-right-arrow" />
             </Link>
             <a href="tel:+9288006780" className={styles.call}>
               <span className={styles.callIcon}>
                 <span className="icon-call" />
               </span>
-              <span>
-                <small>Need help?</small>
+              <span className={styles.callText}>
+                <small>Call Anytime</small>
                 <strong>+92 ( 8800 ) - 6780</strong>
               </span>
             </a>

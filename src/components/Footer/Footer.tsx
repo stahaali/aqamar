@@ -4,19 +4,20 @@ import { IMG } from "@/lib/images";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Meet Our Team", href: "#team" },
-  { label: "Our Projects", href: "#projects" },
-  { label: "Help & FAQs", href: "#contact" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Portfolio", href: "/#projects" },
 ];
 
 const services = [
-  "Property Pulse",
-  "Renovation Rescue",
-  "Property Maintenance",
-  "Security Services",
-  "Relocation Assistance",
+  "Architectural Design, Drawings & Engineering Services",
+  "New Homes, Plazas & Retail Space Design & Permits",
+  "2nd Unit, Below Grade Entrance, Sunroom, Deck",
+  "Insulated Concrete Forms Design & Construction",
+  "Subgrade, Structural & Geo-Technical Engineering",
+  "We Provide Complete Project Design & Construction",
 ];
 
 export default function Footer() {

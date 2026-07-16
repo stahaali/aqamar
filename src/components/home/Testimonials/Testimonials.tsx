@@ -1,29 +1,36 @@
-import Image from "next/image";
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
-import { IMG } from "@/lib/images";
 import styles from "./Testimonials.module.css";
 
 const testimonials = [
   {
     name: "Brandon Clemmer",
     role: "Home owner",
-    img: "testimonial-1-1.jpg",
+    img: "/assets/images/testimonial/testimonial-1-1.webp",
   },
   {
     name: "Alisha Martin",
     role: "Home owner",
-    img: "testimonial-1-2.jpg",
+    img: "/assets/images/testimonial/testimonial-1-2.webp",
   },
   {
     name: "Herbert Spins",
     role: "Home owner",
-    img: "testimonial-1-3.jpg",
+    img: "/assets/images/testimonial/testimonial-1-3.webp",
   },
 ];
 
+const text =
+  "Working with them was smooth and hassle-free. The project exceeded our expectations. Reliable, skilled, and trustworthy. They turned our vision into reality effortlessly. Their attention.";
+
 export default function Testimonials() {
   return (
-    <section className={styles.section}>
+    <section className={styles.testimonial} id="testimonials">
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">Testimonial</div>
@@ -32,34 +39,64 @@ export default function Testimonials() {
             text={"What Our Clients\nSay About Us"}
           />
         </div>
-        <div className={styles.grid}>
+
+        <Swiper
+          className={styles.carousel}
+          modules={[Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            992: { slidesPerView: 2, spaceBetween: 30 },
+          }}
+        >
           {testimonials.map((item) => (
-            <article key={item.name} className={styles.card}>
-              <div className={styles.quote}>“</div>
-              <div className={styles.stars}>★★★★★</div>
-              <p>
-                Working with them was smooth and hassle-free. The project
-                exceeded our expectations. Reliable, skilled, and trustworthy.
-                They turned our vision into reality effortlessly. Their
-                attention.
-              </p>
-              <div className={styles.author}>
+            <SwiperSlide key={item.name}>
+              <article className={styles.single}>
+                <div className={styles.quote1}>
+                  <span className="icon-right-1" />
+                </div>
+                <h3 className={styles.name}>
+                  <a href="#testimonials">{item.name}</a>
+                </h3>
+                <p className={styles.subTitle}>{item.role}</p>
+                <p className={styles.text}>{text}</p>
+                <div className={styles.rating}>
+                  <span className="fas fa-star" />
+                  <span className="fas fa-star" />
+                  <span className="fas fa-star" />
+                  <span className="fas fa-star" />
+                  <span className="fas fa-star" />
+                </div>
+                <div className={styles.quote2}>
+                  <span className="icon-left" />
+                </div>
                 <div className={styles.imgBox}>
-                  <Image
-                    src={`${IMG}/testimonial/${item.img}`}
-                    alt={item.name}
-                    width={70}
-                    height={70}
-                  />
+                  <div className={styles.imgBoxShape1}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/images/shapes/testimonial-one-img-box-shape-1.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div className={styles.imgBoxShape2}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/images/shapes/testimonial-one-img-box-shape-2.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div className={styles.img}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={item.img} alt={item.name} />
+                  </div>
                 </div>
-                <div>
-                  <h4>{item.name}</h4>
-                  <span>{item.role}</span>
-                </div>
-              </div>
-            </article>
+              </article>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

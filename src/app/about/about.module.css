@@ -1,0 +1,100 @@
+/* ===== Page Header ===== */
+.pageHeader {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0e121d;
+  height: 500px;
+}
+
+.pageHeaderBg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
+  z-index: -1;
+}
+
+.pageHeaderBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 18, 29, 0.97) 0%,
+    rgba(14, 18, 29, 0.85) 60%,
+    rgba(14, 18, 29, 0) 80%
+  );
+}
+
+.pageHeaderInner {
+  position: relative;
+  display: block;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pageHeaderInner h3 {
+  font-size: 60px;
+  color: var(--builza-white);
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.breadcrumb li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--builza-base);
+  font-family: var(--builza-font-two);
+  text-transform: capitalize;
+}
+
+.breadcrumb li a {
+  color: var(--builza-white);
+  transition: color 0.4s ease;
+}
+
+.breadcrumb li a:hover {
+  color: var(--builza-base);
+}
+
+.breadcrumb li span {
+  font-size: 16px;
+  color: var(--builza-base);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .pageHeader {
+    height: 420px;
+  }
+
+  .pageHeaderInner {
+    padding: 0;
+  }
+
+  .pageHeaderInner h3 {
+    font-size: 40px;
+  }
+
+  .pageHeaderBg {
+    background-size: cover;
+    background-position: center right;
+  }
+}
