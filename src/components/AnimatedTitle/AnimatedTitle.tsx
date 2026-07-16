@@ -20,6 +20,26 @@ export default function AnimatedTitle({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const threshold = 0.25;
+    const checkVisibilityNow = () => {
+      // If the element is already in the viewport on mount,
+      // IntersectionObserver sometimes doesn't fire the way we expect.
+      const rect = el.getBoundingClientRect();
+      const viewportH =
+        window.innerHeight || document.documentElement.clientHeight;
+      const visibleTop = Math.max(rect.top, 0);
+      const visibleBottom = Math.min(rect.bottom, viewportH);
+      const visibleH = Math.max(0, visibleBottom - visibleTop);
+      const ratio = rect.height > 0 ? visibleH / rect.height : 0;
+      return ratio >= threshold;
+    };
+
+    if (checkVisibilityNow()) {
+      setActive(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -27,7 +47,7 @@ export default function AnimatedTitle({
           observer.disconnect();
         }
       },
-      { threshold: 0.25 }
+      { threshold }
     );
     observer.observe(el);
     return () => observer.disconnect();

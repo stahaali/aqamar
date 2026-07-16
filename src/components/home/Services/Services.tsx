@@ -86,7 +86,7 @@ export default function Services() {
               <article className={styles.single}>
                 <div className={styles.content}>
                   <h3 className={styles.title}>
-                    <Link href="#services">{item.title}</Link>
+                    <Link href="/services">{item.title}</Link>
                   </h3>
                   <p className={styles.text}>
                     Stylish interior and durable exterior solutions for

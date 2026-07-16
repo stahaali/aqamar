@@ -21,7 +21,7 @@
   overflow: hidden;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .carousel :global(.swiper-wrapper) {
@@ -35,8 +35,7 @@
   box-sizing: border-box;
 }
 
-.carousel :global(.swiper-slide-active),
-.carousel :global(.swiper-slide-next) {
+.carousel :global(.swiper-slide-active) {
   opacity: 1;
 }
 
@@ -45,8 +44,7 @@
   display: block;
   background-color: var(--builza-black);
   border-radius: var(--builza-bdr-radius);
-  padding: 40px 170px 30px 70px;
-  border-top-right-radius: 60px;
+  padding: 36px 40px 28px 50px;
   height: 100%;
   margin: 30px 10px 10px 0;
   overflow: visible;
@@ -96,7 +94,7 @@
 .quote2 {
   position: relative;
   display: block;
-  margin-right: -55px;
+  margin-right: 0;
   text-align: right;
 }
 
@@ -150,6 +148,11 @@
 .text {
   color: rgba(var(--builza-white-rgb), 0.7);
   margin: 20px 0 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 5.6em;
 }
 
 .rating {
@@ -168,86 +171,14 @@
   color: var(--builza-base);
 }
 
-.imgBox {
-  position: absolute;
-  top: -15px;
-  right: 10px;
-  border-radius: 50%;
-  background-color: var(--builza-base);
-  padding: 10px;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.imgBox::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -70px;
-  width: 70px;
-  height: 25px;
-  background-color: #833513;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-}
-
-.imgBox::after {
-  content: "";
-  position: absolute;
-  bottom: -70px;
-  right: 0;
-  width: 25px;
-  height: 70px;
-  background-color: #833513;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-}
-
-.img {
-  position: relative;
-  display: block;
-  max-width: 180px;
-  width: 100%;
-  border-radius: 50%;
-}
-
-.img img {
-  width: 100%;
-  border-radius: 50%;
-  display: block;
-}
-
-.imgBoxShape1 {
-  position: absolute;
-  top: 0;
-  left: -34px;
-  line-height: 0;
-}
-
-.imgBoxShape1 img {
-  width: auto;
-  display: block;
-}
-
-.imgBoxShape2 {
-  position: absolute;
-  bottom: -26px;
-  right: 0;
-  line-height: 0;
-}
-
-.imgBoxShape2 img {
-  width: auto;
-  display: block;
-}
-
 .carousel :global(.swiper-pagination) {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 0;
+  padding-top: 8px;
   gap: 22px;
 }
 
@@ -291,24 +222,5 @@
   .single {
     padding: 30px 40px 40px;
     margin: 40px 10px 10px;
-  }
-
-  .imgBox {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: fit-content;
-    margin: 24px auto 0;
-  }
-
-  .imgBox::before,
-  .imgBox::after,
-  .imgBoxShape1,
-  .imgBoxShape2 {
-    display: none;
-  }
-
-  .quote2 {
-    margin-right: 0;
   }
 }

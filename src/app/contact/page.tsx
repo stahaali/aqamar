@@ -16,14 +16,14 @@ const infos = [
   {
     icon: "icon-call",
     label: "Contact Us",
-    value: "+55 827 057 5405",
-    href: "tel:558270575405",
+    value: "647-802-9008",
+    href: "tel:+16478029008",
   },
   {
     icon: "icon-email",
     label: "Mail Us",
-    value: "example@gmail.com",
-    href: "mailto:example@gmail.com",
+    value: "abdul9008@gmail.com",
+    href: "mailto:abdul9008@gmail.com",
   },
   {
     icon: "icon-map",

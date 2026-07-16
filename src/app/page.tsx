@@ -2,7 +2,6 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Banner from "@/components/home/Banner/Banner";
 import About from "@/components/home/About/About";
-import Services from "@/components/home/Services/Services";
 import SlidingText from "@/components/home/SlidingText/SlidingText";
 import Projects from "@/components/home/Projects/Projects";
 import Process from "@/components/home/Process/Process";
@@ -15,7 +14,6 @@ export default function Home() {
       <main>
         <Banner />
         <About />
-        <Services />
         <SlidingText />
         <Projects />
         <Process />

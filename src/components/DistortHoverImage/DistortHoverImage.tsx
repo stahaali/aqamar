@@ -10,6 +10,7 @@ type DistortHoverImageProps = {
   alt: string;
   displacementSrc?: string;
   className?: string;
+  fill?: boolean;
 };
 
 type HoverEffectCtor = new (opts: Record<string, unknown>) => unknown;
@@ -27,6 +28,7 @@ export default function DistortHoverImage({
   alt,
   displacementSrc = "/assets/images/webgl/1.jpg",
   className,
+  fill = false,
 }: DistortHoverImageProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -82,7 +84,9 @@ export default function DistortHoverImage({
       const natH = measure.naturalHeight;
       if (!natW || !natH) return;
 
-      wrapper.style.aspectRatio = `${natW} / ${natH}`;
+      if (!fill) {
+        wrapper.style.aspectRatio = `${natW} / ${natH}`;
+      }
 
       await new Promise<void>((r) =>
         requestAnimationFrame(() => requestAnimationFrame(() => r())),
@@ -133,12 +137,12 @@ export default function DistortHoverImage({
       setReady(false);
       canvas.replaceChildren();
     };
-  }, [src, displacementSrc]);
+  }, [src, displacementSrc, fill]);
 
   return (
     <div
       ref={wrapperRef}
-      className={`${styles.wrapper} ${ready ? styles.ready : ""} ${className ?? ""}`}
+      className={`${styles.wrapper} ${fill ? styles.fill : ""} ${ready ? styles.ready : ""} ${className ?? ""}`}
     >
       <div ref={canvasRef} className={styles.canvas} aria-hidden={!ready} />
       {/* eslint-disable-next-line @next/next/no-img-element */}

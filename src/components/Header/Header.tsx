@@ -3,19 +3,35 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Projects", href: "/#projects" },
   { label: "Portfolio", href: "/#projects" },
 ];
 
+function isActive(href: string, pathname: string, hash: string) {
+  if (href === "/") {
+    return pathname === "/" && !hash;
+  }
+
+  if (href.startsWith("/#")) {
+    const target = href.slice(1);
+    return pathname === "/" && hash === target;
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export default function Header() {
+  const pathname = usePathname();
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hash, setHash] = useState("");
 
   useEffect(() => {
     const onScroll = () => setSticky(window.scrollY > 80);
@@ -23,6 +39,13 @@ export default function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash || "");
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [pathname]);
 
   return (
     <header className={`${styles.header} ${sticky ? styles.headerSticky : ""}`}>
@@ -34,7 +57,7 @@ export default function Header() {
                 <span className={styles.contactIcon}>
                   <span className="icon-mail" />
                 </span>
-                <a href="mailto:info@Builza25.com">info@Builza25.com</a>
+                <a href="mailto:abdul9008@gmail.com">abdul9008@gmail.com</a>
               </li>
               <li>
                 <span className={styles.contactIcon}>
@@ -44,24 +67,18 @@ export default function Header() {
               </li>
             </ul>
 
-            <p className={styles.welcome}>
-              Welcome To Builza Our Best Construction HTML5 Template
-            </p>
-
             <div className={styles.topRight}>
               <p className={styles.socialTitle}>Follow Us On:</p>
               <div className={styles.social}>
-                <a href="#" aria-label="Twitter">
-                  <i className="fab fa-twitter" />
-                </a>
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className={styles.socialFacebook}
+                >
                   <i className="fab fa-facebook-f" />
                 </a>
-                <a href="#" aria-label="Pinterest">
-                  <i className="fab fa-pinterest-p" />
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <i className="fab fa-instagram" />
+                <a href="#" aria-label="Yelp" className={styles.socialYelp}>
+                  <i className="fab fa-yelp" />
                 </a>
               </div>
             </div>
@@ -75,8 +92,8 @@ export default function Header() {
             <Image
               src="/assets/images/logo.webp"
               alt="AQ Construction"
-              width={180}
-              height={137}
+              width={210}
+              height={160}
               priority
             />
           </Link>
@@ -93,13 +110,27 @@ export default function Header() {
           </button>
 
           <ul className={`${styles.menu} ${open ? styles.menuOpen : ""}`}>
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href} onClick={() => setOpen(false)}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const active = isActive(item.href, pathname, hash);
+              return (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className={active ? styles.active : undefined}
+                    onClick={() => {
+                      setOpen(false);
+                      if (item.href.startsWith("/#")) {
+                        setHash(item.href.slice(1));
+                      } else if (item.href === "/") {
+                        setHash("");
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className={styles.navRight}>
@@ -107,13 +138,13 @@ export default function Header() {
               <span className="thmBtnText">Get A Quote</span>
               <span className="btnIcon icon-right-arrow" />
             </Link>
-            <a href="tel:+9288006780" className={styles.call}>
+            <a href="tel:+16478029008" className={styles.call}>
               <span className={styles.callIcon}>
                 <span className="icon-call" />
               </span>
               <span className={styles.callText}>
                 <small>Call Anytime</small>
-                <strong>+92 ( 8800 ) - 6780</strong>
+                <strong>647-802-9008</strong>
               </span>
             </a>
           </div>

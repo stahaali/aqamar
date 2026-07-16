@@ -3,9 +3,17 @@ import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import DistortHoverImage from "@/components/DistortHoverImage/DistortHoverImage";
 import styles from "./About.module.css";
 
-export default function About() {
+type AboutProps = {
+  /** White background (About page). Home keeps cream primary. */
+  plainBg?: boolean;
+};
+
+export default function About({ plainBg = false }: AboutProps) {
   return (
-    <section className={styles.about} id="about">
+    <section
+      className={`${styles.about} ${plainBg ? styles.plainBg : ""}`}
+      id="about"
+    >
       <div className={`${styles.topShape} ${styles.floatBobY}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/assets/images/about/shape.webp" alt="" />

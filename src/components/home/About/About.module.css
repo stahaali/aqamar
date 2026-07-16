@@ -1,8 +1,12 @@
 .about {
   position: relative;
   padding: 120px 0;
-  background: #fff;
+  background: var(--builza-primary);
   overflow: hidden;
+}
+
+.plainBg {
+  background: #fff;
 }
 
 .topShape {

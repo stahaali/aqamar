@@ -1,0 +1,267 @@
+.features {
+  position: relative;
+  padding: 100px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.bottomShape {
+  position: absolute;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  line-height: 0;
+  max-width: 480px;
+  width: 38vw;
+  opacity: 0.9;
+}
+
+.bottomShape img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  margin-bottom: 0;
+  font-family: var(--builza-font-two);
+  font-weight: 700;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.media {
+  --cut-w: 110px;
+  --cut-h: 90px;
+  --cut-gap: 14px;
+  --cut-r: 14px;
+  position: relative;
+  border-radius: var(--builza-bdr-radius);
+  overflow: hidden;
+  height: 100%;
+  align-self: stretch;
+  background: #fff;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* L-cut with rounded left edge + rounded inner corner */
+  clip-path: path(
+    "M 142 0 H 5000 V 5000 H 0 V 122 Q 0 104 18 104 H 106 Q 124 104 124 86 V 18 Q 124 0 142 0 Z"
+  );
+}
+
+.experienceBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: var(--cut-w);
+  height: var(--cut-h);
+  background: var(--builza-base);
+  border-radius: 12px;
+}
+
+.mediaCard {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 26px 26px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  max-width: none;
+  width: auto;
+}
+
+.mediaEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--builza-base);
+  line-height: 1;
+}
+
+.mediaEyebrow::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: var(--builza-base);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  flex-shrink: 0;
+}
+
+.mediaTitle {
+  margin: 0 0 12px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--builza-black);
+  font-family: var(--builza-font-two);
+}
+
+.mediaText {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.content {
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 24px 26px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--builza-base);
+  font-size: 40px;
+  line-height: 1;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--builza-black);
+  font-family: var(--builza-font-two);
+}
+
+.text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #666666;
+}
+
+@media (max-width: 1199px) {
+  .inner {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .media {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .features {
+    padding: 70px 0;
+  }
+
+  .media {
+    --cut-w: 90px;
+    --cut-h: 74px;
+    --cut-gap: 10px;
+    min-height: 340px;
+    height: 340px;
+  }
+
+  .image {
+    clip-path: path(
+      "M 114 0 H 5000 V 5000 H 0 V 98 Q 0 84 14 84 H 86 Q 100 84 100 70 V 14 Q 100 0 114 0 Z"
+    );
+  }
+
+  .experienceBadge {
+    border-radius: 10px;
+  }
+
+  .mediaCard {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 20px 18px;
+    width: auto;
+  }
+
+  .mediaTitle {
+    font-size: 20px;
+  }
+
+  .mediaText {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 26px 22px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .bottomShape {
+    max-width: 220px;
+    width: 55vw;
+  }
+}

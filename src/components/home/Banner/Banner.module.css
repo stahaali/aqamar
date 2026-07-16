@@ -4,9 +4,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 85vh;
   height: auto;
-  padding: 160px 0 60px;
+  padding: 140px 0 50px;
   background-color: var(--builza-black);
   overflow: hidden;
   z-index: 5;
@@ -185,9 +185,9 @@
 /* ===== 1920px only — left content exact match ===== */
 @media only screen and (min-width: 1920px) {
   .banner {
-    min-height: 100vh;
+    min-height: 85vh;
     height: auto;
-    padding: 160px 0 60px;
+    padding: 140px 0 50px;
   }
 
   .left {
@@ -548,8 +548,8 @@
 @media (max-width: 991px) {
   .banner {
     height: auto;
-    min-height: 100vh;
-    padding: 130px 0 80px;
+    min-height: 80vh;
+    padding: 120px 0 70px;
   }
 
   .inner {

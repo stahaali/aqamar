@@ -92,16 +92,6 @@
   color: var(--builza-black);
 }
 
-.welcome {
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  text-transform: capitalize;
-  font-family: var(--builza-font-two), "Exo", sans-serif;
-  line-height: 1em;
-  margin: 0;
-}
-
 .topRight {
   position: relative;
   display: flex;
@@ -142,6 +132,30 @@
   background: #fff;
   color: var(--builza-base);
   border-color: #fff;
+}
+
+.socialFacebook {
+  background: #1877f2;
+  border-color: #1877f2 !important;
+  color: #fff !important;
+}
+
+.socialFacebook:hover {
+  background: #fff !important;
+  color: #1877f2 !important;
+  border-color: #fff !important;
+}
+
+.socialYelp {
+  background: #d32323;
+  border-color: #d32323 !important;
+  color: #fff !important;
+}
+
+.socialYelp:hover {
+  background: #fff !important;
+  color: #d32323 !important;
+  border-color: #fff !important;
 }
 
 .nav {
@@ -210,15 +224,18 @@
   z-index: 1;
 }
 
-.menu li:first-child a,
 .menu li:hover a {
   color: var(--builza-base);
 }
 
-.menu li:first-child a::before,
-.menu li:hover a::before {
+.menu li:hover a::before,
+.menu a.active::before {
   transform: scale(1, 1);
-  transform-origin: right center;
+  transform-origin: left center;
+}
+
+.menu a.active {
+  color: var(--builza-base);
 }
 
 .navRight {
@@ -299,10 +316,6 @@
 
 @media (max-width: 1199px) {
   .call {
-    display: none;
-  }
-
-  .welcome {
     display: none;
   }
 }

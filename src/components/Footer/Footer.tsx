@@ -6,18 +6,19 @@ import styles from "./Footer.module.css";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Projects", href: "/#projects" },
   { label: "Portfolio", href: "/#projects" },
 ];
 
-const services = [
-  "Architectural Design, Drawings & Engineering Services",
-  "New Homes, Plazas & Retail Space Design & Permits",
-  "2nd Unit, Below Grade Entrance, Sunroom, Deck",
-  "Insulated Concrete Forms Design & Construction",
-  "Subgrade, Structural & Geo-Technical Engineering",
-  "We Provide Complete Project Design & Construction",
+const hours = [
+  "Monday: 8AM - 5AM",
+  "Tuesday: 8AM - 5AM",
+  "Wednesday: 8AM - 5AM",
+  "Thursday: 8AM - 5AM",
+  "Friday: 8AM - 5AM",
+  "Saturday: 12PM - 4AM",
+  "Sunday: 12AM - 4AM",
 ];
 
 export default function Footer() {
@@ -34,10 +35,10 @@ export default function Footer() {
           <div className={styles.about}>
             <Link href="/" className={styles.logo}>
               <Image
-                src="/assets/images/logo.webp"
+                src="/assets/images/footer-logo.webp"
                 alt="AQ Construction"
-                width={140}
-                height={107}
+                width={262}
+                height={200}
               />
             </Link>
             <p>
@@ -73,12 +74,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className={styles.title}>Our Services</h3>
-            <ul className={styles.links}>
-              {services.map((item) => (
-                <li key={item}>
-                  <Link href="#services">{item}</Link>
-                </li>
+            <h3 className={styles.title}>Hours</h3>
+            <ul className={styles.hours}>
+              {hours.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
@@ -86,12 +85,17 @@ export default function Footer() {
           <div>
             <h3 className={styles.title}>Contact Us</h3>
             <ul className={styles.contact}>
-              <li>4140 Parker Rd. Allentown, New Mexico 31134</li>
               <li>
-                <a href="tel:+885747546027">+88 574 7546 027</a>
+                <span className={`${styles.contactIcon} icon-map`} />
+                <span>4140 Parker Rd. Allentown, New Mexico 31134</span>
               </li>
               <li>
-                <a href="mailto:Builza@gmail.com">Builza@gmail.com</a>
+                <span className={`${styles.contactIcon} icon-call`} />
+                <a href="tel:+16478029008">647-802-9008</a>
+              </li>
+              <li>
+                <span className={`${styles.contactIcon} icon-email`} />
+                <a href="mailto:abdul9008@gmail.com">abdul9008@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -100,20 +104,19 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <div className={`container ${styles.bottomInner}`}>
-          <p>
-            Copyright© 2026 <Link href="/">Builza</Link>. All Rights Reserved.
+          <p className={styles.copyright}>
+            Copyright© 2018 Aqamar, All Rights Reserved.
           </p>
-          <ul>
-            <li>
-              <Link href="#">Terms of Service</Link>
-            </li>
-            <li>
-              <Link href="#">Privacy policy</Link>
-            </li>
-            <li>
-              <Link href="#">Support</Link>
-            </li>
-          </ul>
+          <p className={styles.powered}>
+            Powered by{" "}
+            <a
+              href="https://dezyonstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dezon Studio
+            </a>
+          </p>
         </div>
       </div>
     </footer>

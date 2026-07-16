@@ -33,7 +33,7 @@
 
 .logo img {
   width: auto;
-  height: 64px;
+  height: 100px;
   object-fit: contain;
 }
 
@@ -77,9 +77,33 @@
   color: var(--builza-base);
 }
 
+.hours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hours li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 14px;
   padding-left: 0;
+  line-height: 1.5;
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  color: var(--builza-base);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 2px;
 }
 
 .contact a:hover {
@@ -105,18 +129,24 @@
   color: var(--builza-base);
 }
 
-.bottom ul {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.bottom ul a {
+.copyright {
+  margin: 0;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.bottom ul a:hover {
+.powered {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.powered a {
   color: var(--builza-base);
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.powered a:hover {
+  opacity: 0.85;
 }
 
 @media (max-width: 991px) {
@@ -132,5 +162,10 @@
 
   .top {
     padding: 70px 0 50px;
+  }
+
+  .bottomInner {
+    justify-content: center;
+    text-align: center;
   }
 }
