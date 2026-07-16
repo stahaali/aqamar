@@ -1,0 +1,109 @@
+.team {
+  padding: 120px 0;
+  background: var(--builza-primary);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.head :global(.sectionTag) {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.imgBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imgBox img {
+  transform: scale(1.06);
+}
+
+.social {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%) translateY(20px);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.card:hover .social {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.social a {
+  width: 38px;
+  height: 38px;
+  background: var(--builza-base);
+  color: #fff !important;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.content {
+  padding: 22px 16px 28px;
+}
+
+.content h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.content h3 a:hover {
+  color: var(--builza-base);
+}
+
+.content p {
+  color: var(--builza-base);
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team {
+    padding: 80px 0;
+  }
+}

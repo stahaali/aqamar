@@ -1,0 +1,89 @@
+.form {
+  position: relative;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.box {
+  position: relative;
+  display: block;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: var(--builza-bdr-radius);
+  font-family: var(--builza-font);
+}
+
+.input {
+  height: 57px;
+  padding: 0 20px;
+}
+
+.textarea {
+  height: 175px;
+  padding: 15px 20px;
+  resize: vertical;
+  display: block;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(var(--builza-base-rgb), 0.6);
+}
+
+.btnBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btnBox :global(.thmBtn)::before,
+.btnBox :global(.thmBtn)::after {
+  background-color: #fff;
+}
+
+.btnBox :global(.thmBtn):hover {
+  color: var(--builza-base) !important;
+  background-color: transparent;
+}
+
+.btnBox :global(.thmBtn):hover :global(.btnIcon) {
+  background-color: var(--builza-base);
+  color: #fff;
+}
+
+.thanks {
+  color: var(--builza-base);
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,244 @@
+/* ===== Page Header ===== */
+.pageHeader {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pageHeaderBg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.pageHeaderBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 18, 29, 0.97) 0%,
+    rgba(14, 18, 29, 0.85) 60%,
+    rgba(14, 18, 29, 0) 80%
+  );
+}
+
+.pageHeaderInner {
+  position: relative;
+  display: block;
+  padding: 160px 0 140px;
+  text-align: center;
+  z-index: 1;
+}
+
+.pageHeaderInner h3 {
+  font-size: 60px;
+  color: var(--builza-white);
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.breadcrumb li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--builza-base);
+  font-family: var(--builza-font-two);
+  text-transform: capitalize;
+}
+
+.breadcrumb li a {
+  color: var(--builza-white);
+  transition: color 0.4s ease;
+}
+
+.breadcrumb li a:hover {
+  color: var(--builza-base);
+}
+
+.breadcrumb li span {
+  font-size: 16px;
+  color: var(--builza-base);
+  font-weight: 700;
+}
+
+/* ===== Contact Info Cards ===== */
+.info {
+  position: relative;
+  display: block;
+  padding: 120px 0 90px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.infoCard {
+  position: relative;
+  display: block;
+  border-radius: var(--builza-bdr-radius);
+  background-color: var(--builza-primary);
+  text-align: center;
+  padding: 40px 30px 41px;
+}
+
+.infoIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--builza-base);
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.infoIcon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: var(--builza-black);
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+  z-index: -1;
+}
+
+.infoCard:hover .infoIcon::before {
+  transform: scale(1);
+}
+
+.infoIcon span {
+  position: relative;
+  display: inline-block;
+  font-size: 26px;
+  color: var(--builza-white);
+  transition: all 500ms linear 0.1s;
+  transform: scale(1);
+}
+
+.infoCard:hover .infoIcon span {
+  transform: scale(0.9);
+}
+
+.infoCard p {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.infoCard h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--builza-black);
+}
+
+.infoCard h3 a {
+  color: var(--builza-black);
+}
+
+.infoCard h3 a:hover {
+  color: var(--builza-base);
+}
+
+/* ===== Contact Page (map + form) ===== */
+.contact {
+  position: relative;
+  display: block;
+  padding: 0 0 120px;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  background-color: var(--builza-black);
+  border-radius: var(--builza-bdr-radius);
+  padding: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: 0;
+  border-radius: var(--builza-bdr-radius);
+  display: block;
+}
+
+.formTitle {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: var(--builza-white);
+  margin-bottom: 26px;
+}
+
+@media (max-width: 991px) {
+  .pageHeaderInner {
+    padding: 130px 0 110px;
+  }
+
+  .pageHeaderInner h3 {
+    font-size: 44px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    padding: 80px 0 50px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inner {
+    padding: 40px;
+  }
+
+  .map {
+    min-height: 340px;
+  }
+
+  .formTitle {
+    font-size: 34px;
+  }
+
+  .contact {
+    padding: 0 0 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .inner {
+    padding: 24px;
+  }
+}

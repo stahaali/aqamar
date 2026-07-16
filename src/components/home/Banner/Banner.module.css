@@ -1,0 +1,638 @@
+/* ===== Banner One — exact Builza right-side CSS ===== */
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 160px 0 40px;
+  background-color: var(--builza-black);
+  overflow: hidden;
+  z-index: 5;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+/* LEFT */
+.left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+  flex: 0 1 54%;
+  max-width: 700px;
+}
+
+.titleBox {
+  position: relative;
+  display: block;
+}
+
+.subTitle {
+  position: relative;
+  display: block;
+}
+
+.subTitle p {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  color: var(--builza-base);
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: var(--builza-font);
+}
+
+.title {
+  position: relative;
+  font-size: 48px;
+  color: var(--builza-white);
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: capitalize;
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-family: var(--builza-font-two);
+}
+
+.title span {
+  color: var(--builza-base);
+}
+
+.text {
+  position: relative;
+  display: block;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 44px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.btnRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 0;
+}
+
+.btnBox {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+/* Banner Discover More — hover: white bg, orange text, orange arrow box */
+.btnBox :global(.thmBtn) {
+  isolation: isolate;
+}
+
+.btnBox :global(.thmBtn)::before,
+.btnBox :global(.thmBtn)::after {
+  background-color: #fff;
+  z-index: 0;
+}
+
+.btnBox :global(.thmBtn):hover {
+  color: var(--builza-base) !important;
+  background-color: transparent;
+}
+
+.btnBox :global(.thmBtn):hover :global(.btnIcon) {
+  background-color: var(--builza-base);
+  color: #fff;
+}
+
+.videoLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 3;
+}
+
+.videoIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--builza-white);
+  background-color: var(--builza-base);
+  border-radius: 50%;
+  box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 7%);
+}
+
+.videoIcon span {
+  display: inline-flex;
+  line-height: 1;
+}
+
+.videoIcon::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(255, 94, 20, 0.4);
+  border-radius: 50%;
+  animation: pulseRing 2s ease-out infinite;
+}
+
+.videoTitle {
+  font-size: 20px;
+  color: var(--builza-base);
+  font-weight: 700;
+  line-height: 1em;
+}
+
+/* ===== 1920px only — left content exact match ===== */
+@media only screen and (min-width: 1920px) {
+  .banner {
+    min-height: 100vh;
+    height: 100vh;
+    padding: 160px 0 40px;
+  }
+
+  .left {
+    max-width: 700px;
+    margin-right: 0;
+  }
+
+  .subTitle p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: var(--builza-base);
+  }
+
+  .title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-top: 24px;
+    color: var(--builza-white);
+  }
+
+  .title span {
+    color: var(--builza-base);
+  }
+
+  .text {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    margin-bottom: 44px;
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  .btnRow {
+    gap: 25px;
+  }
+
+  .videoIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .videoTitle {
+    font-size: 20px;
+    color: var(--builza-base);
+    font-weight: 700;
+  }
+
+  .right {
+    bottom: auto;
+    right: auto;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .img > img {
+    max-height: 110%;
+    height: 110%;
+  }
+}
+
+/* ===== RIGHT — height matches left content ===== */
+.right {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  flex: 0 1 46%;
+  display: flex;
+  align-items: stretch;
+  min-height: 0;
+}
+
+.imgBox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.img {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.img > img {
+  width: auto;
+  max-width: 100%;
+  height: 110%;
+  max-height: 110%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  margin-bottom: -40px;
+  animation: topBottom 3s ease-in-out infinite;
+}
+
+/* Client Review */
+.clientReview {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px 15px 25px;
+  bottom: 40px;
+  left: 0;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.clientReviewImgList {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clientReviewImgList li + li {
+  margin-left: -15px;
+}
+
+.clientReviewImg {
+  position: relative;
+  max-width: 50px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.clientReviewImg img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+.clientReviewInfo {
+  position: relative;
+  display: block;
+}
+
+.clientReviewText {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}
+
+/* Happy Customer / 2000+ */
+.happyCustomer {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 20px 15px;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.happyCustomerList {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.happyCustomerIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  color: #fff;
+  font-size: 28px;
+}
+
+.happyCustomerCountBox {
+  position: relative;
+  display: block;
+}
+
+.happyCustomerCountInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.happyCustomerCountInner p,
+.happyCustomerCountInner span {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: var(--builza-font-two);
+  margin: 0;
+}
+
+.happyCustomerCountInner p {
+  font-weight: 600;
+}
+
+.happyCustomerText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/* Point singles */
+.pointSingle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 10px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+  z-index: 55;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.pointSingle.one {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transform: rotate(-25deg);
+}
+
+.pointSingle.two {
+  position: absolute;
+  top: 28%;
+  right: 0;
+}
+
+.pointSingle.three {
+  position: absolute;
+  bottom: 18%;
+  right: 0;
+  background-color: rgba(14, 18, 29, 0.3);
+}
+
+.pointIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 28px;
+  color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pointContent {
+  position: relative;
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+.pointContent h5 {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2em;
+  margin: 0;
+  font-family: var(--builza-font-two);
+  font-weight: 700;
+}
+
+.pointContent p {
+  font-size: 12px;
+  color: #fff;
+  line-height: 18px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+@keyframes topBottom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+/* Responsive — match Builza breakpoints */
+@media only screen and (min-width: 1200px) and (max-width: 1319px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .clientReview {
+    left: 0;
+  }
+
+  .pointSingle {
+    max-width: 260px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner {
+    height: auto;
+    min-height: 100vh;
+    padding: 130px 0 80px;
+  }
+
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .right {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 30px;
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: 380px;
+  }
+
+  .imgBox,
+  .img {
+    height: 380px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .img > img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .left {
+    margin-right: 0;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .pointSingle.one {
+    left: 0;
+    top: 40px;
+  }
+
+  .pointSingle.two {
+    right: 0;
+  }
+
+  .pointSingle.three {
+    right: 0;
+  }
+
+  .clientReview {
+    left: 0;
+    bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 30px;
+    line-height: 1.4em;
+  }
+
+  .pointSingle {
+    max-width: 240px;
+  }
+
+  .happyCustomerCountInner p,
+  .happyCustomerCountInner span {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .clientReview {
+    padding: 15px 12px;
+    gap: 12px;
+  }
+
+  .clientReviewText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
