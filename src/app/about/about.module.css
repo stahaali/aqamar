@@ -9,7 +9,7 @@
   background-color: #0e121d;
   height: 700px;
   min-height: 700px;
-  padding-top: 175px;
+  padding-top: 145px;
   box-sizing: border-box;
 }
 
@@ -21,27 +21,11 @@
 
 .pageHeaderBg {
   position: absolute;
-  /* Start below absolute white header so uncle head is not hidden */
-  top: 175px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: right center;
-  z-index: -1;
-}
-
-.pageHeaderBg::before {
-  content: "";
-  position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(14, 18, 29, 0.97) 0%,
-    rgba(14, 18, 29, 0.85) 55%,
-    rgba(14, 18, 29, 0) 80%
-  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .pageHeaderInner {
@@ -97,10 +81,6 @@
     height: 480px;
     min-height: 480px;
   }
-
-  .pageHeaderBg {
-    top: 120px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -111,9 +91,7 @@
   }
 
   .pageHeaderBg {
-    top: 110px;
-    background-size: cover;
-    background-position: right center;
+    background-position: center;
   }
 
   .pageHeaderInner h3 {

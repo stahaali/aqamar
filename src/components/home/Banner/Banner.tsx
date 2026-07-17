@@ -14,7 +14,11 @@ export default function Banner() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <h2 className={styles.title}>
-            <span className={styles.line}>From Plans to Permits</span>
+            <span className={styles.line}>
+              From Plans to Permits
+              <br />
+              &amp; Quality Control
+            </span>
             <span className={`${styles.line} ${styles.accent}`}>
               We Handle It All.
             </span>

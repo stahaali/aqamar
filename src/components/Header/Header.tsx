@@ -49,48 +49,11 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${sticky ? styles.headerSticky : ""}`}>
-      {!sticky && (
-        <div className={styles.topbar}>
-          <div className={`container ${styles.topbarInner}`}>
-            <ul className={styles.contactList}>
-              <li>
-                <span className={styles.contactIcon}>
-                  <span className="icon-mail" />
-                </span>
-                <a href="mailto:abdul9008@gmail.com">abdul9008@gmail.com</a>
-              </li>
-              <li>
-                <span className={styles.contactIcon}>
-                  <span className="icon-map" />
-                </span>
-                <span>2565 Steeles Avenue East Unit 11, Brampton, ON, L6T 4L6</span>
-              </li>
-            </ul>
-
-            <div className={styles.topRight}>
-              <p className={styles.socialTitle}>Follow Us On:</p>
-              <div className={styles.social}>
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className={styles.socialFacebook}
-                >
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a href="#" aria-label="Yelp" className={styles.socialYelp}>
-                  <i className="fab fa-yelp" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       <nav className={styles.nav}>
         <div className={`container ${styles.navInner}`}>
           <Link href="/" className={styles.logo}>
             <Image
-              src="/assets/images/logo-1.webp"
+              src="/assets/images/logo-3.webp"
               alt="AQ Construction"
               width={262}
               height={200}
@@ -134,15 +97,26 @@ export default function Header() {
           </ul>
 
           <div className={styles.navRight}>
-            <a href="tel:+16478029008" className={styles.call}>
-              <span className={styles.callIcon}>
-                <span className="icon-call" />
-              </span>
-              <span className={styles.callText}>
-                <small>Call Anytime</small>
-                <strong>647-802-9008</strong>
-              </span>
-            </a>
+            <div className={styles.contactStack}>
+              <a href="tel:+16478029008" className={styles.call}>
+                <span className={styles.callIcon}>
+                  <span className="icon-call" />
+                </span>
+                <span className={styles.callText}>
+                  <small>Call Anytime</small>
+                  <strong>647-802-9008</strong>
+                </span>
+              </a>
+              <a href="mailto:abdul9008@gmail.com" className={styles.callEmail}>
+                <span className={styles.callIconSm}>
+                  <span className="icon-mail" />
+                </span>
+                <span className={styles.callText}>
+                  <small>As Email Prefer</small>
+                  <strong>abdul9008@gmail.com</strong>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>

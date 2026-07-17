@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Do you provide complete turnkey construction services?",
     answer:
-      "Yes. From planning and design to construction, finishing, and final handover, we manage the entire project.",
+      "We provide complete project management services.",
   },
   {
     question: "Can you help with property buying and selling?",

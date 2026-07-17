@@ -11,7 +11,7 @@ export default function Subscribe() {
           backgroundImage: `url(${IMG}/shapes/subscribe-one-shape-1.png)`,
         }}
       />
-      <div className={`container ${styles.inner}`}>
+      <div className={`container ${styles.inner}`}> 
         <div className={styles.content}>
           <h2>Subscribe to Our Newsletter</h2>
           <p>

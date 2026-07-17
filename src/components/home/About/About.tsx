@@ -52,13 +52,6 @@ export default function About({ plainBg = false }: AboutProps) {
                   alt="About construction team"
                 />
               </div>
-              <div className={styles.shape1}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/assets/images/about/shape-ruler-new.webp"
-                  alt=""
-                />
-              </div>
               <div className={styles.img2}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

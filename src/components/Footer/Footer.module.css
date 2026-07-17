@@ -22,7 +22,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
   gap: 40px;
 }
 
@@ -33,7 +33,7 @@
 
 .logo img {
   width: auto;
-  height: 220px;
+  height: 360px;
   object-fit: contain;
 }
 

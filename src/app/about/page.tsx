@@ -23,7 +23,7 @@ export default function AboutPage() {
             className={styles.pageHeaderBg}
             style={{
               backgroundImage:
-                "url(/assets/images/about/about-banner3.webp)",
+                "url(/assets/images/about/about-banner4.webp)",
             }}
           />
           <div className="container">

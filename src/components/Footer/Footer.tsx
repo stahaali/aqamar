@@ -11,16 +11,6 @@ const quickLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const hours = [
-  "Monday: 8AM - 5AM",
-  "Tuesday: 8AM - 5AM",
-  "Wednesday: 8AM - 5AM",
-  "Thursday: 8AM - 5AM",
-  "Friday: 8AM - 5AM",
-  "Saturday: 12PM - 4AM",
-  "Sunday: 12AM - 4AM",
-];
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -35,17 +25,12 @@ export default function Footer() {
           <div className={styles.about}>
             <Link href="/" className={styles.logo}>
               <Image
-                src="/assets/images/logo-1.webp"
+                src="/assets/images/logo-3.webp"
                 alt="AQ Construction"
                 width={262}
                 height={200}
               />
             </Link>
-            <p>
-              Believe that great food starts with great farming. For 40 years,
-              our farm has been committed to sustainable, eco-friendly and full
-              of goodness.
-            </p>
           </div>
 
           <div>
@@ -55,15 +40,6 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link href={item.href}>{item.label}</Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className={styles.title}>Hours</h3>
-            <ul className={styles.hours}>
-              {hours.map((item) => (
-                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>

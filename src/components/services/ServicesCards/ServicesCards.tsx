@@ -32,7 +32,7 @@ const cards = [
     text: "Structural, subgrade, and geo-technical engineering reviews with detailed inspections and practical solutions.",
   },
   {
-    title: "Complete Project Design & Construction",
+    title: "Complete Quality Control For Services For Project",
     count: "06",
     icon: "icon-building-construction",
     text: "End-to-end project design and construction support — drawings, permits, and coordination from start to finish.",

@@ -13,7 +13,7 @@ const steps = [
     icon: "icon-building-plan",
   },
   {
-    title: "Construction",
+    title: "Quality Control",
     text: "Understanding project requirements and creating a clear plan.",
     icon: "icon-construction-method",
   },
