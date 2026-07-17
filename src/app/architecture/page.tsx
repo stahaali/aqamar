@@ -22,7 +22,7 @@ export default function ArchitecturePage() {
             className={styles.pageHeaderBg}
             style={{
               backgroundImage:
-                "url(/assets/images/architecture/1.webp)",
+                "url(/assets/images/architecture/archtecure-banner.webp)",
             }}
           />
           <div className="container">
