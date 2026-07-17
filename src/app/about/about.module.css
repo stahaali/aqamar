@@ -49,13 +49,16 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumb li {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--builza-base);
+  color: var(--builza-white);
   font-family: var(--builza-font-two);
   text-transform: capitalize;
 }
@@ -71,7 +74,7 @@
 
 .breadcrumb li span {
   font-size: 16px;
-  color: var(--builza-base);
+  color: var(--builza-white);
   font-weight: 700;
 }
 
