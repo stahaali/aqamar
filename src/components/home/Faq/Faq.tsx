@@ -64,11 +64,11 @@ export default function Faq() {
     <section className={styles.faq} id="faq">
       <div className={styles.shapeLeft} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/assets/images/testimonial/shape-2.webp" alt="" />
+        <img src="/assets/images/shape-3.webp" alt="" />
       </div>
       <div className={styles.shapeRight} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/assets/images/testimonial/shape-3.webp" alt="" />
+        <img src="/assets/images/shape-4.webp" alt="" />
       </div>
 
       <div className="container">

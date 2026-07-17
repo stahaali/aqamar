@@ -125,3 +125,17 @@
   font-weight: 600;
   font-size: 14px;
 }
+
+.error {
+  margin: 4px 0 0;
+  text-align: center;
+  color: #c62828;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.send:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}

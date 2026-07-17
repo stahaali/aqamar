@@ -177,7 +177,7 @@
 
 .logo img {
   width: auto;
-  height: 78px;
+  height: 110px;
   object-fit: contain;
 }
 
@@ -361,6 +361,6 @@
   }
 
   .logo img {
-    height: 64px;
+    height: 88px;
   }
 }
