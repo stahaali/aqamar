@@ -21,7 +21,7 @@ export default function ServicesPage() {
             className={styles.pageHeaderBg}
             style={{
               backgroundImage:
-                "url(/assets/images/services/services-banner.webp)",
+                "url(/assets/images/services/service-banner04.webp)",
             }}
           />
           <div className="container">

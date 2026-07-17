@@ -17,16 +17,27 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("/api/contact", {
+      const payload = {
+        name: data.get("name"),
+        email: data.get("email"),
+        phone: data.get("phone"),
+        message: data.get("message"),
+      };
+
+      // Prefer Next API in `next dev`; fall back to PHP for static `out` hosting
+      let res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          phone: data.get("phone"),
-          message: data.get("message"),
-        }),
+        body: JSON.stringify(payload),
       });
+
+      if (res.status === 404 || res.status === 405) {
+        res = await fetch("/api/contact.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
 
       const json = await res.json().catch(() => ({}));
 
