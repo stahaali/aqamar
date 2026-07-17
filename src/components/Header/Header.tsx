@@ -10,8 +10,8 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Portfolio", href: "/#projects" },
+  { label: "Architecture", href: "/architecture" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function isActive(href: string, pathname: string, hash: string) {
@@ -63,7 +63,7 @@ export default function Header() {
                 <span className={styles.contactIcon}>
                   <span className="icon-map" />
                 </span>
-                <span>4124 Cimmaron Road, CA 92806</span>
+                <span>2565 Steeles Avenue East Unit 11, Brampton, ON, L6T 4L6</span>
               </li>
             </ul>
 
@@ -134,10 +134,6 @@ export default function Header() {
           </ul>
 
           <div className={styles.navRight}>
-            <Link href="/contact" className="thmBtn">
-              <span className="thmBtnText">Get A Quote</span>
-              <span className="btnIcon icon-right-arrow" />
-            </Link>
             <a href="tel:+16478029008" className={styles.call}>
               <span className={styles.callIcon}>
                 <span className="icon-call" />

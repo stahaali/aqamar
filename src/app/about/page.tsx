@@ -19,12 +19,10 @@ export default function AboutPage() {
       <Header />
       <main>
         <section className={styles.pageHeader}>
-          <div
-            className={styles.pageHeaderBg}
-            style={{
-              backgroundImage:
-                "url(/assets/images/about/about-banner.webp)",
-            }}
+          <img
+            className={styles.pageHeaderImg}
+            src="/assets/images/about/about-banner2.webp"
+            alt=""
           />
           <div className="container">
             <div className={styles.pageHeaderInner}>

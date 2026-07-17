@@ -7,8 +7,8 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Portfolio", href: "/#projects" },
+  { label: "Architecture", href: "/architecture" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const hours = [
@@ -46,20 +46,6 @@ export default function Footer() {
               our farm has been committed to sustainable, eco-friendly and full
               of goodness.
             </p>
-            <div className={styles.social}>
-              <a href="#" aria-label="Twitter">
-                𝕏
-              </a>
-              <a href="#" aria-label="Facebook">
-                f
-              </a>
-              <a href="#" aria-label="Pinterest">
-                p
-              </a>
-              <a href="#" aria-label="Instagram">
-                ig
-              </a>
-            </div>
           </div>
 
           <div>
@@ -87,7 +73,7 @@ export default function Footer() {
             <ul className={styles.contact}>
               <li>
                 <span className={`${styles.contactIcon} icon-map`} />
-                <span>4140 Parker Rd. Allentown, New Mexico 31134</span>
+                <span>2565 Steeles Avenue East Unit 11, Brampton, ON, L6T 4L6</span>
               </li>
               <li>
                 <span className={`${styles.contactIcon} icon-call`} />

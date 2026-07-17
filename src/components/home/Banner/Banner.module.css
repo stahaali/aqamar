@@ -4,8 +4,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 85vh;
-  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   padding: 140px 0 50px;
   background-color: var(--builza-black);
   overflow: hidden;
@@ -21,67 +23,51 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.08;
+  opacity: 1;
   z-index: -1;
+}
+
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 18, 29, 0.4);
+  pointer-events: none;
 }
 
 .inner {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
-/* LEFT — defines the row height */
-.left {
+.content {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   z-index: 3;
   width: 100%;
-  min-width: 0;
-  padding-bottom: 0;
-}
-
-.titleBox {
-  position: relative;
-  display: block;
-}
-
-.subTitle {
-  position: relative;
-  display: block;
-}
-
-.subTitle p {
-  position: relative;
-  display: block;
-  font-size: 16px;
-  color: var(--builza-base);
-  font-weight: 700;
-  line-height: 1em;
-  text-transform: uppercase;
-  margin: 0;
-  font-family: var(--builza-font);
+  max-width: 900px;
+  text-align: center;
 }
 
 .title {
   position: relative;
-  font-size: 42px;
+  font-size: 48px;
   color: var(--builza-white);
   font-weight: 700;
-  line-height: 1.18em;
-  margin-top: 24px;
-  margin-bottom: 0;
+  line-height: 1.2em;
+  margin: 0;
   font-family: var(--builza-font-two);
+  text-align: center;
 }
 
 .line {
   display: block;
-  white-space: nowrap;
 }
 
 .accent {
@@ -91,19 +77,21 @@
 .text {
   position: relative;
   display: block;
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 44px;
+  margin-top: 22px;
+  margin-bottom: 40px;
   line-height: 1.7;
-  max-width: 100%;
+  max-width: 700px;
+  text-align: center;
 }
 
 .btnRow {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 0;
@@ -182,67 +170,23 @@
   line-height: 1em;
 }
 
-/* ===== 1920px only — left content exact match ===== */
+/* ===== 1920px only ===== */
 @media only screen and (min-width: 1920px) {
   .banner {
-    min-height: 85vh;
-    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     padding: 140px 0 50px;
   }
 
-  .left {
-    margin-right: 0;
-  }
-
-  .subTitle p {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1em;
-    text-transform: uppercase;
-    color: var(--builza-base);
-  }
-
   .title {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.12em;
-    margin-top: 24px;
-    color: var(--builza-white);
-  }
-
-  .title .line {
-    display: block;
-    white-space: nowrap;
-  }
-
-  .accent {
-    color: var(--builza-base);
+    font-size: 56px;
+    line-height: 1.15em;
   }
 
   .text {
-    font-size: 17px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 20px;
-    margin-bottom: 44px;
-    max-width: 100%;
-    line-height: 1.7;
-  }
-
-  .btnRow {
-    gap: 25px;
-  }
-
-  .videoIcon {
-    width: 60px;
-    height: 60px;
-    font-size: 18px;
-  }
-
-  .videoTitle {
-    font-size: 20px;
-    color: var(--builza-base);
-    font-weight: 700;
+    font-size: 19px;
   }
 }
 
@@ -515,118 +459,43 @@
 /* Responsive — match Builza breakpoints */
 @media only screen and (min-width: 1200px) and (max-width: 1319px) {
   .title {
-    font-size: 38px;
+    font-size: 44px;
   }
 }
 
 @media (max-width: 1199px) {
-  .clientReview {
-    left: 0;
-  }
-
-  .pointSingle {
-    max-width: 260px;
-  }
-
   .title {
-    font-size: 36px;
-  }
-
-  .img > img {
-    height: 100%;
-    max-width: 100%;
-    margin-right: 0;
+    font-size: 40px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .title {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 991px) {
   .banner {
-    height: auto;
-    min-height: 80vh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     padding: 120px 0 70px;
   }
 
-  .inner {
-    grid-template-columns: 1fr;
-    align-items: stretch;
-  }
-
-  .right {
-    position: relative;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 420px;
-    height: 380px;
-    justify-self: center;
-  }
-
-  .imgBox,
-  .img {
-    position: absolute;
-    inset: 0;
-  }
-
-  .img > img {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .left {
-    margin-right: 0;
-    max-width: 100%;
-  }
-
-  .pointSingle.one {
-    left: 0;
-    top: 40px;
-  }
-
-  .pointSingle.two {
-    right: 0;
-  }
-
-  .pointSingle.three {
-    right: 0;
-  }
-
-  .clientReview {
-    left: 0;
-    bottom: 40px;
+  .title {
+    font-size: 34px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .title {
-    font-size: 30px;
-    line-height: 1.4em;
+    font-size: 28px;
+    line-height: 1.3em;
   }
 
-  .pointSingle {
-    max-width: 240px;
-  }
-
-  .happyCustomerCountInner p,
-  .happyCustomerCountInner span {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  .clientReview {
-    padding: 15px 12px;
-    gap: 12px;
-  }
-
-  .clientReviewText {
-    font-size: 14px;
-    line-height: 20px;
+  .text {
+    font-size: 16px;
   }
 }

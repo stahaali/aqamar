@@ -9,8 +9,9 @@ export default function OurMission() {
         <div className={styles.inner}>
           <div className={styles.media}>
             <DistortHoverImage
-              src="/assets/images/about/our-mission.webp"
-              alt="Luxury home with pool"
+              src="/assets/images/mission/2.webp"
+              alt="Our construction and engineering team"
+              fill
             />
           </div>
 

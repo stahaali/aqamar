@@ -15,59 +15,38 @@ export default function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.grid}>
-        <div className={styles.box}>
-          <input
-            className={styles.input}
-            type="text"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-        </div>
-        <div className={styles.box}>
-          <input
-            className={styles.input}
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-        <div className={styles.box}>
-          <input
-            className={styles.input}
-            type="text"
-            name="phone"
-            placeholder="Mobile"
-          />
-        </div>
-        <div className={styles.box}>
-          <input
-            className={styles.input}
-            type="text"
-            name="subject"
-            placeholder="Subject"
-          />
-        </div>
-        <div className={`${styles.box} ${styles.full}`}>
-          <textarea
-            className={styles.textarea}
-            name="message"
-            placeholder="Message"
-          />
-        </div>
-      </div>
-
-      <div className={styles.btnBox}>
-        <button type="submit" className="thmBtn">
-          <span className="thmBtnText">Send Message</span>
-          <span className="btnIcon icon-right-arrow" />
-        </button>
-        {submitted && (
-          <span className={styles.thanks}>Thank you! We&apos;ll be in touch.</span>
-        )}
-      </div>
+      <input
+        className={styles.input}
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <input
+        className={styles.input}
+        type="email"
+        name="email"
+        placeholder="Email*"
+        required
+      />
+      <input
+        className={styles.input}
+        type="tel"
+        name="phone"
+        placeholder="Phone"
+      />
+      <textarea
+        className={styles.textarea}
+        name="message"
+        placeholder="What are the dates and details of your project?"
+        required
+      />
+      <button type="submit" className={styles.send}>
+        <span>SEND</span>
+      </button>
+      {submitted && (
+        <p className={styles.thanks}>Thank you! We&apos;ll be in touch.</p>
+      )}
     </form>
   );
 }

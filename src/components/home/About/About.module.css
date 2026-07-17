@@ -9,6 +9,31 @@
   background: #fff;
 }
 
+.plainBg .left {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.verticalPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.verticalImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--builza-bdr-radius);
+  height: 460px;
+  background: #eef0f3;
+}
+
+.verticalImg :global(img),
+.verticalImg :global(canvas) {
+  border-radius: var(--builza-bdr-radius);
+}
+
 .topShape {
   position: absolute;
   top: 0;
@@ -84,16 +109,23 @@
   position: absolute;
   top: 0;
   left: -190px;
-  width: 175px;
+  width: 190px;
   height: 155px;
-  background-color: var(--builza-base);
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
   z-index: 1;
+  line-height: 0;
+}
+
+.shape1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
 }
 
 .img2 {
   position: absolute;
-  top: 171px; /* shape height 155px + 16px gap */
+  top: 163px; /* shape height 155px + 8px gap */
   bottom: -168px;
   left: -190px;
   border-radius: var(--builza-bdr-radius);
@@ -161,6 +193,8 @@
 
 .text {
   margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .bottom {
@@ -184,6 +218,59 @@
   .shape1,
   .img2 {
     left: -120px;
+  }
+}
+
+/* Only ~1366px screens */
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .inner {
+    gap: 36px;
+  }
+
+  .left {
+    margin-left: 110px;
+    margin-right: 24px;
+  }
+
+  .shape1,
+  .img2 {
+    left: -110px;
+  }
+
+  .shape1 {
+    width: 110px;
+    height: 100px;
+  }
+
+  .img2 {
+    top: 108px;
+  }
+
+  .experience {
+    max-width: 180px;
+    padding: 24px 14px;
+  }
+
+  .experience h3,
+  .experience span {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .experienceText {
+    font-size: 15px;
+  }
+
+  .topShape {
+    right: 30px;
+  }
+
+  .topShape img {
+    width: 70px;
+    max-width: 70px;
+    max-height: 140px;
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -211,16 +298,50 @@
     max-width: 500px;
   }
 
+  .plainBg .left {
+    max-width: none;
+  }
+
+  .verticalImg {
+    height: 380px;
+  }
+
   .imgBox {
     margin-bottom: 120px;
   }
 
   .shape1 {
     left: 0;
+    width: 200px;
+    height: 160px;
   }
 
   .img2 {
     left: 0;
     max-width: 200px;
+    top: 168px;
+  }
+}
+
+@media (max-width: 576px) {
+  .img2 {
+    display: none;
+  }
+
+  .topShape {
+    display: none;
+  }
+
+  .experience {
+    display: none;
+  }
+
+  .verticalPair {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .verticalImg {
+    height: 280px;
   }
 }

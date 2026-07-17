@@ -3,32 +3,32 @@ import Link from "next/link";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import ContactForm from "@/components/contact/ContactForm";
-import { IMG } from "@/lib/images";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact || Builza || Construction Template",
+  title: "Contact Us || AQ Construction",
   description:
-    "Get in touch with Builza — reach us for construction and building project enquiries.",
+    "Get in touch for engineering, building permits, and real estate services in the Greater Toronto Area.",
 };
 
 const infos = [
   {
-    icon: "icon-call",
-    label: "Contact Us",
-    value: "647-802-9008",
-    href: "tel:+16478029008",
-  },
-  {
-    icon: "icon-email",
-    label: "Mail Us",
-    value: "abdul9008@gmail.com",
-    href: "mailto:abdul9008@gmail.com",
-  },
-  {
     icon: "icon-map",
-    label: "Our Office Location",
-    value: "12 Green Road 05 New Yark",
+    title: "Our Address",
+    lines: ["4140 Parker Rd. Allentown,", "New Mexico 31134"],
+  },
+  {
+    icon: "icon-call",
+    title: "Contact Number",
+    lines: [
+      { text: "647-802-9008", href: "tel:+16478029008" },
+      { text: "abdul9008@gmail.com", href: "mailto:abdul9008@gmail.com" },
+    ],
+  },
+  {
+    icon: "icon-business",
+    title: "Hours Of Operation",
+    lines: ["Mon – Fri: 8:00 AM – 5:00 PM", "Sat: 12:00 PM – 4:00 PM"],
   },
 ];
 
@@ -38,15 +38,14 @@ export default function ContactPage() {
       <Header />
       <main>
         <section className={styles.pageHeader}>
-          <div
-            className={styles.pageHeaderBg}
-            style={{
-              backgroundImage: `url(${IMG}/backgrounds/page-header-bg.jpg)`,
-            }}
+          <img
+            className={styles.pageHeaderImg}
+            src="/assets/images/contact/contact-banner.webp"
+            alt=""
           />
           <div className="container">
             <div className={styles.pageHeaderInner}>
-              <h3>Contact</h3>
+              <h3>Contact Us</h3>
               <ul className={styles.breadcrumb}>
                 <li>
                   <Link href="/">Home</Link>
@@ -62,42 +61,48 @@ export default function ContactPage() {
 
         <section className={styles.info}>
           <div className="container">
+            <h2 className={styles.sectionTitle}>Our Contact Information</h2>
             <div className={styles.infoGrid}>
               {infos.map((item) => (
-                <div key={item.label} className={styles.infoCard}>
+                <div key={item.title} className={styles.infoCard}>
                   <div className={styles.infoIcon}>
                     <span className={item.icon} />
                   </div>
-                  <p>{item.label}</p>
-                  <h3>
-                    {item.href ? (
-                      <a href={item.href}>{item.value}</a>
-                    ) : (
-                      item.value
-                    )}
-                  </h3>
+                  <div className={styles.infoBody}>
+                    <h3>{item.title}</h3>
+                    {item.lines.map((line) => {
+                      if (typeof line === "string") {
+                        return <p key={line}>{line}</p>;
+                      }
+                      return (
+                        <p key={line.text}>
+                          <a href={line.href}>{line.text}</a>
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className={styles.contact}>
+        <section className={styles.touch}>
           <div className="container">
-            <div className={styles.inner}>
-              <div className={styles.grid}>
-                <div className={styles.left}>
-                  <iframe
-                    title="Office location map"
-                    className={styles.map}
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                    allowFullScreen
-                  />
-                </div>
-                <div className={styles.right}>
-                  <h3 className={styles.formTitle}>Get A Free Quote</h3>
-                  <ContactForm />
-                </div>
+            <h2 className={styles.sectionTitle}>Get In Touch</h2>
+            <div className={styles.touchGrid}>
+              <div className={styles.mapCol}>
+                <iframe
+                  title="Office location map"
+                  className={styles.map}
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880!2d-79.6780124!3d43.7141956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6b4e8e722ee7%3A0xdc16cc6218766088!2sAbdul%20Qamar%20Design%20Engineer%20%26%20Realtor!5e0!3m2!1sen!2sca!4v1!5m2!1sen!2sca"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className={styles.formWrap}>
+                <ContactForm />
               </div>
             </div>
           </div>

@@ -1,0 +1,113 @@
+/* ===== Page Header — match About banner height ===== */
+.pageHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0e121d;
+  height: 700px;
+  min-height: 700px;
+  padding-top: 145px;
+  box-sizing: border-box;
+}
+
+.pageHeader :global(.container) {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.pageHeaderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+.pageHeaderBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 18, 29, 0.45);
+}
+
+.pageHeaderInner {
+  position: relative;
+  display: block;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.pageHeaderInner h3 {
+  font-size: 60px;
+  color: var(--builza-white);
+  line-height: 1.1em;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--builza-base);
+  font-family: var(--builza-font-two);
+  text-transform: capitalize;
+}
+
+.breadcrumb li a {
+  color: var(--builza-white);
+  transition: color 0.4s ease;
+}
+
+.breadcrumb li a:hover {
+  color: var(--builza-base);
+}
+
+.breadcrumb li span {
+  font-size: 16px;
+  color: var(--builza-base);
+  font-weight: 700;
+}
+
+@media (max-width: 991px) {
+  .pageHeader {
+    padding-top: 100px;
+    height: 480px;
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageHeader {
+    height: 420px;
+    min-height: 420px;
+    padding-top: 90px;
+  }
+
+  .pageHeaderBg {
+    background-position: center 15%;
+  }
+
+  .pageHeaderInner h3 {
+    font-size: 40px;
+  }
+}

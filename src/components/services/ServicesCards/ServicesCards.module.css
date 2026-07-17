@@ -74,7 +74,7 @@
 }
 
 .text {
-  margin: 0 0 28px;
+  margin: 0;
   font-size: 15px;
   line-height: 1.7;
   color: var(--builza-gray);
@@ -82,33 +82,6 @@
   flex: 1;
   position: relative;
   z-index: 1;
-}
-
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--builza-black);
-  transition: color 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.link:hover {
-  color: var(--builza-base);
-}
-
-.arrow {
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
-
-.link:hover .arrow {
-  transform: translateX(4px);
 }
 
 .shape {

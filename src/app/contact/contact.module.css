@@ -1,43 +1,52 @@
 /* ===== Page Header ===== */
 .pageHeader {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   z-index: 1;
   background-color: #0e121d;
+  height: 700px;
+  min-height: 700px;
+  padding-top: 145px;
+  box-sizing: border-box;
 }
 
-.pageHeaderBg {
+.pageHeader :global(.container) {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.pageHeaderImg {
   position: absolute;
   inset: 0;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: right center;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top right;
+  z-index: 0;
 }
 
-.pageHeaderBg::before {
+.pageHeader::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(14, 18, 29, 0.97) 0%,
-    rgba(14, 18, 29, 0.85) 60%,
-    rgba(14, 18, 29, 0) 80%
-  );
+  background: rgba(14, 18, 29, 0.45);
+  z-index: 1;
 }
 
 .pageHeaderInner {
   position: relative;
   display: block;
-  padding: 160px 0 140px;
+  padding: 0;
   text-align: center;
   z-index: 1;
 }
 
 .pageHeaderInner h3 {
-  font-size: 60px;
+  font-size: 52px;
   color: var(--builza-white);
   line-height: 1em;
   font-weight: 700;
@@ -49,6 +58,9 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumb li {
@@ -75,171 +87,190 @@
   font-weight: 700;
 }
 
-/* ===== Contact Info Cards ===== */
+/* ===== Contact Info ===== */
 .info {
   position: relative;
-  display: block;
-  padding: 120px 0 90px;
+  padding: 100px 0 40px;
+  background: #fff;
+}
+
+.sectionTitle {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--builza-black);
+  font-family: var(--builza-font-two);
 }
 
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
 .infoCard {
-  position: relative;
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px 24px;
+  border: 1px solid #e8e8e8;
   border-radius: var(--builza-bdr-radius);
-  background-color: var(--builza-primary);
-  text-align: center;
-  padding: 40px 30px 41px;
+  background: #fff;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.infoCard:hover {
+  border-color: rgba(var(--builza-base-rgb), 0.35);
+  box-shadow: 0 12px 30px rgba(14, 18, 29, 0.06);
 }
 
 .infoIcon {
-  position: relative;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
-  background-color: var(--builza-base);
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.infoIcon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: var(--builza-black);
-  transform: scale(0);
-  transform-origin: center;
-  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
-  z-index: -1;
-}
-
-.infoCard:hover .infoIcon::before {
-  transform: scale(1);
-}
-
-.infoIcon span {
-  position: relative;
-  display: inline-block;
-  font-size: 26px;
-  color: var(--builza-white);
-  transition: all 500ms linear 0.1s;
-  transform: scale(1);
-}
-
-.infoCard:hover .infoIcon span {
-  transform: scale(0.9);
-}
-
-.infoCard p {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.infoCard h3 {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 32px;
-  color: var(--builza-black);
-}
-
-.infoCard h3 a {
-  color: var(--builza-black);
-}
-
-.infoCard h3 a:hover {
+  background: rgba(var(--builza-base-rgb), 0.12);
   color: var(--builza-base);
 }
 
-/* ===== Contact Page (map + form) ===== */
-.contact {
-  position: relative;
-  display: block;
-  padding: 0 0 120px;
+.infoIcon span {
+  font-size: 22px;
+  line-height: 1;
+  color: var(--builza-base);
 }
 
-.inner {
-  position: relative;
-  display: block;
-  background-color: var(--builza-black);
-  border-radius: var(--builza-bdr-radius);
-  padding: 60px;
+.infoBody h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--builza-black);
 }
 
-.grid {
+.infoBody p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--builza-gray);
+}
+
+.infoBody a {
+  color: var(--builza-gray);
+  transition: color 0.3s ease;
+}
+
+.infoBody a:hover {
+  color: var(--builza-base);
+}
+
+/* ===== Get In Touch — map left, form right ===== */
+.touch {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0 100px;
+  background: #fff;
+}
+
+.touchGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
   align-items: stretch;
 }
 
+.mapCol {
+  position: relative;
+  min-height: 480px;
+  border-radius: var(--builza-bdr-radius);
+  overflow: hidden;
+  background: #1a1f2b;
+}
+
 .map {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 480px;
   border: 0;
-  border-radius: var(--builza-bdr-radius);
-  display: block;
 }
 
-.formTitle {
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 1.2em;
-  color: var(--builza-white);
-  margin-bottom: 26px;
+.formWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 32px 40px;
+  background: #fff;
+  border-radius: var(--builza-bdr-radius);
+  box-shadow: 0 16px 50px rgba(14, 18, 29, 0.1);
+  border: 1px solid #eee;
 }
 
 @media (max-width: 991px) {
-  .pageHeaderInner {
-    padding: 130px 0 110px;
+  .pageHeader {
+    height: 480px;
+    min-height: 480px;
+    padding-top: 100px;
   }
 
   .pageHeaderInner h3 {
-    font-size: 44px;
+    font-size: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .info {
+    padding: 70px 0 30px;
   }
 
   .infoGrid {
     grid-template-columns: 1fr;
   }
 
-  .info {
-    padding: 80px 0 50px;
+  .touch {
+    padding: 40px 0 70px;
   }
 
-  .grid {
+  .touchGrid {
     grid-template-columns: 1fr;
   }
 
-  .inner {
-    padding: 40px;
-  }
-
+  .mapCol,
   .map {
     min-height: 340px;
   }
 
-  .formTitle {
-    font-size: 34px;
+  .formWrap {
+    padding: 28px 22px 32px;
   }
+}
 
-  .contact {
-    padding: 0 0 80px;
+@media (max-width: 767px) {
+  .pageHeader {
+    height: 420px;
+    min-height: 420px;
+    padding-top: 90px;
   }
 }
 
 @media (max-width: 575px) {
-  .inner {
-    padding: 24px;
+  .pageHeaderInner h3 {
+    font-size: 32px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  .mapCol,
+  .map {
+    min-height: 280px;
   }
 }

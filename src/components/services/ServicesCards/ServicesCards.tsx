@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./ServicesCards.module.css";
 
 const cards = [
@@ -53,12 +52,6 @@ export default function ServicesCards() {
               </div>
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.text}>{item.text}</p>
-              <Link href="/contact" className={styles.link}>
-                VIEW DETAILS
-                <span className={styles.arrow} aria-hidden>
-                  →
-                </span>
-              </Link>
               <div className={styles.shape}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
