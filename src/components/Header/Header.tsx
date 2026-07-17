@@ -90,7 +90,7 @@ export default function Header() {
         <div className={`container ${styles.navInner}`}>
           <Link href="/" className={styles.logo}>
             <Image
-              src="/assets/images/footer-logo.webp"
+              src="/assets/images/logo-1.webp"
               alt="AQ Construction"
               width={262}
               height={200}
