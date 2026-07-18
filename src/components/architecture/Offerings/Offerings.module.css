@@ -1,7 +1,7 @@
 .section {
   position: relative;
   padding: 120px 0;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .head {
@@ -29,23 +29,23 @@
   padding: 28px 24px;
   border: 1px solid #e8e8e8;
   border-radius: 0;
-  background: #fff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--builza-primary);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.35s ease;
 }
 
 .item:hover {
-  border-color: var(--builza-base);
-  box-shadow: 0 8px 24px rgba(14, 18, 29, 0.06);
-}
-
-.itemAccent {
   background: var(--builza-base);
   border-color: var(--builza-base);
+  box-shadow: 0 16px 50px rgba(255, 94, 20, 0.28);
 }
 
-.itemAccent:hover {
-  border-color: var(--builza-base);
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.25);
+.item:hover .icon,
+.item:hover .title,
+.item:hover .text {
+  color: var(--builza-white);
 }
 
 .icon {
@@ -60,18 +60,7 @@
 }
 
 .item:hover .icon {
-  color: var(--builza-black);
   transform: rotate(360deg);
-}
-
-.itemAccent .icon,
-.itemAccent:hover .icon {
-  color: #fff;
-}
-
-.itemAccent .title,
-.itemAccent .text {
-  color: #fff;
 }
 
 .title {
@@ -83,6 +72,7 @@
   color: var(--builza-black);
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  transition: color 0.35s ease;
 }
 
 .text {
@@ -92,6 +82,7 @@
   line-height: 1.75;
   color: var(--builza-gray);
   text-align: left;
+  transition: color 0.35s ease;
 }
 
 @media (max-width: 991px) {

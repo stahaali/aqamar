@@ -1,5 +1,4 @@
 import { IMG } from "@/lib/images";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import DistortHoverImage from "@/components/DistortHoverImage/DistortHoverImage";
 import styles from "./About.module.css";
 
@@ -10,9 +9,6 @@ type AboutProps = {
 
 export default function About({ plainBg = false }: AboutProps) {
   const tag = plainBg ? "About Us" : "About Our Company";
-  const title = plainBg
-    ? "Building Excellence, Delivering Trust"
-    : "Engineering Excellence for Every Project.";
 
   return (
     <section
@@ -72,7 +68,15 @@ export default function About({ plainBg = false }: AboutProps) {
 
         <div className={styles.right}>
           <div className="sectionTag">{tag}</div>
-          <AnimatedTitle className="sectionTitle" text={title} />
+          {plainBg ? (
+            <h2 className={`sectionTitle ${styles.title}`}>
+              Building Excellence, <span>Delivering Trust</span>
+            </h2>
+          ) : (
+            <h2 className={`sectionTitle ${styles.title}`}>
+              <span>Engineering Excellence</span> for Every Project.
+            </h2>
+          )}
           <p className={styles.text}>
             At Abdul Qamar Engineer &amp; Realtor, we specialize in civil
             engineering, construction, and real estate solutions with a

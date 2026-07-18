@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import About from "@/components/home/About/About";
 import OurMission from "@/components/about/OurMission/OurMission";
 import Features from "@/components/about/Features/Features";
+import ProjectTabs from "@/components/about/ProjectTabs/ProjectTabs";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function AboutPage() {
         <About plainBg />
         <OurMission />
         <Features />
+        <ProjectTabs />
       </main>
       <Footer />
     </>

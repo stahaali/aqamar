@@ -10,7 +10,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Architecture", href: "/architecture" },
+  { label: "Real Estate", href: "/architecture" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -112,7 +112,7 @@ export default function Header() {
                   <span className="icon-mail" />
                 </span>
                 <span className={styles.callText}>
-                  <small>As Email Prefer</small>
+                  <small>Preferred Contact is Email</small>
                   <strong>abdul9008@gmail.com</strong>
                 </span>
               </a>

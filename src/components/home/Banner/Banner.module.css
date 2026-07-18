@@ -110,7 +110,7 @@
 
 .btnBox :global(.thmBtn)::before,
 .btnBox :global(.thmBtn)::after {
-  background-color: #fff;
+  background-color: var(--builza-primary);
   z-index: 0;
 }
 
@@ -477,10 +477,8 @@
 
 @media (max-width: 991px) {
   .banner {
-    min-height: 100vh;
-    min-height: 100dvh;
-    height: 100vh;
-    height: 100dvh;
+    height: auto;
+    min-height: min(100dvh, 720px);
     padding: 120px 0 70px;
   }
 

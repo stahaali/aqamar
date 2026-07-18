@@ -1,4 +1,3 @@
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Process.module.css";
 
 const steps = [
@@ -40,7 +39,9 @@ export default function Process() {
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">Our Process</div>
-          <AnimatedTitle className="sectionTitle" text="How We Work" />
+          <h2 className={`sectionTitle ${styles.heading}`}>
+            How We <span>Work</span>
+          </h2>
         </div>
         <div className={styles.inner}>
           <div className={styles.row}>

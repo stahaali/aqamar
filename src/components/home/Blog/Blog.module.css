@@ -1,6 +1,6 @@
 .blog {
   padding: 120px 0;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .head {
@@ -19,7 +19,7 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--builza-primary);
   border: 1px solid var(--builza-bdr-color);
   border-radius: 10px;
   overflow: hidden;
@@ -63,7 +63,7 @@
   position: absolute;
   right: 16px;
   bottom: 16px;
-  background: #fff;
+  background: var(--builza-primary);
   text-align: center;
   padding: 8px 12px;
   border-radius: 6px;

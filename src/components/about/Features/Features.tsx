@@ -1,36 +1,35 @@
 import DistortHoverImage from "@/components/DistortHoverImage/DistortHoverImage";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Features.module.css";
 
 const items = [
   {
-    title: "NEW HOME",
-    text: "Built in 2024, on a corner lot with a covered area of 3230 Sft",
+    title: "New Custom Home Design",
+    text: "Custom home design tailored to your lifestyle — blending modern architecture, quality craftsmanship, and personalized layouts to bring your dream home to life.",
     icon: "icon-house",
   },
   {
-    title: "MAIN FLOOR",
-    text: "Separate Family and Living rooms, with open concept Kitchen, with Quartz counter top. A huge DEN can be converted to a bedroom on main floor",
+    title: "Home Additions & Alterations",
+    text: "Expert home additions and alterations to expand your space and boost property value — expert craftsmanship for room extensions, remodels, and structural upgrades.",
     icon: "icon-home",
   },
   {
-    title: "SECOND FLOOR",
-    text: "4 Bedrooms with 3 Full bathrooms, potential for a 5th bedroom, currently a LOFT",
+    title: "Additional Living Units",
+    text: "Expand your property with additional living units — expertly built for extra family space, rental income, or long-term flexibility.",
     icon: "icon-housing",
   },
   {
-    title: "BASEMENT",
-    text: "Full height basement, with rough in for washroom can serve as in-law suite",
+    title: "Sun Rooms",
+    text: "Bright, energy-efficient sun rooms designed to bring natural light and extra living space to your home — perfect for relaxation year round.",
     icon: "icon-building",
   },
   {
-    title: "Appliances Included",
-    text: "Stainless Steel Fridge, Stove, Built in Dishwasher and Washer and Dryer",
+    title: "ADU Construction",
+    text: "Professional ADU construction to add functional living space, increase property value, and create rental-ready units on your existing lot",
     icon: "icon-assets",
   },
   {
-    title: "RENTAL ITEMS",
-    text: "Water heater only",
+    title: "Interior Remodeling",
+    text: "Complete interior remodeling to transform outdated spaces into modern, functional living areas — quality finishes tailored to your style and needs.",
     icon: "icon-best-price",
   },
 ];
@@ -44,10 +43,9 @@ export default function Features() {
       </div>
       <div className="container">
         <div className={styles.head}>
-          <AnimatedTitle
-            className={`sectionTitle ${styles.heading}`}
-            text="Complete Home Features"
-          />
+          <h2 className={`sectionTitle ${styles.heading}`}>
+            End-to-End <span>Solutions</span>
+          </h2>
         </div>
 
         <div className={styles.inner}>
@@ -66,7 +64,7 @@ export default function Features() {
                 Welcome 98 Shepherd Drive, Barrie Ontario
               </h3>
               <p className={styles.mediaText}>
-                3230 Sft home with 4 Bedroom 2 Story home fully built in 2024,
+                Home with 4 Bedroom 2 Story home fully built in 2024,
                 Easy access from Mapleview Drive East to Hwy 400 and Simco Lake
                 front
               </p>

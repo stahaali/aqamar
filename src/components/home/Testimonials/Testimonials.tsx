@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Testimonials.module.css";
 
 const MAPS_URL =
@@ -51,10 +50,11 @@ export default function Testimonials() {
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">Testimonial</div>
-          <AnimatedTitle
-            className="sectionTitle"
-            text={"What Our Clients\nSay About Us"}
-          />
+          <h2 className={`sectionTitle ${styles.title}`}>
+            What Our Clients
+            <br />
+            Say <span>About Us</span>
+          </h2>
         </div>
 
         <Swiper

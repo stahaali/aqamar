@@ -3,11 +3,12 @@ import Link from "next/link";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Offerings from "@/components/architecture/Offerings/Offerings";
+import Acquisition from "@/components/architecture/Acquisition/Acquisition";
 import Inspections from "@/components/architecture/Inspections/Inspections";
 import styles from "./architecture.module.css";
 
 export const metadata: Metadata = {
-  title: "Architecture || AQ Construction",
+  title: "Real Estate || AQ Construction",
   description:
     "Architectural offerings including as-built surveys, feasibility studies, renderings, 3D modeling, construction documents, and consultant coordination.",
 };
@@ -27,7 +28,7 @@ export default function ArchitecturePage() {
           />
           <div className="container">
             <div className={styles.pageHeaderInner}>
-              <h3>Architecture</h3>
+              <h3>Real Estate</h3>
               <ul className={styles.breadcrumb}>
                 <li>
                   <Link href="/">Home</Link>
@@ -35,13 +36,14 @@ export default function ArchitecturePage() {
                 <li>
                   <span className="fas fa-angle-right" />
                 </li>
-                <li>Architecture</li>
+                <li>Real Estate</li>
               </ul>
             </div>
           </div>
         </section>
 
         <Offerings />
+        <Acquisition />
         <Inspections />
       </main>
       <Footer />

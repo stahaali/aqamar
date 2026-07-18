@@ -1,7 +1,7 @@
 .section {
   position: relative;
   padding: 120px 0;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .layout {
@@ -40,7 +40,7 @@
   flex-direction: column;
   flex: 1;
   padding: 36px 32px 32px;
-  background: #fff;
+  background: var(--builza-primary);
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
   overflow: hidden;

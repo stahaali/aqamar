@@ -50,6 +50,10 @@
   z-index: 1;
 }
 
+.heading span {
+  color: var(--builza-base);
+}
+
 .head :global(.sectionTag) {
   justify-content: center;
 }
@@ -92,7 +96,7 @@
   position: relative;
   display: block;
   text-align: center;
-  background-color: var(--builza-white);
+  background-color: var(--builza-primary);
   border: 1px solid var(--builza-bdr-color);
   padding: 30px 30px 60px;
   border-top-left-radius: 130px;
@@ -145,7 +149,7 @@
   justify-content: center;
   width: 80px;
   height: 80px;
-  background-color: var(--builza-white);
+  background-color: var(--builza-primary);
   border-radius: 50%;
   border: 8px solid var(--builza-base);
   margin: 0 auto;

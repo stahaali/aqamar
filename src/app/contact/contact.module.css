@@ -91,7 +91,7 @@
 .info {
   position: relative;
   padding: 100px 0 40px;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .sectionTitle {
@@ -117,7 +117,7 @@
   padding: 28px 24px;
   border: 1px solid #e8e8e8;
   border-radius: var(--builza-bdr-radius);
-  background: #fff;
+  background: var(--builza-primary);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -172,7 +172,7 @@
   position: relative;
   z-index: 2;
   padding: 50px 0 100px;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .touchGrid {
@@ -204,7 +204,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 36px 32px 40px;
-  background: #fff;
+  background: var(--builza-primary);
   border-radius: var(--builza-bdr-radius);
   box-shadow: 0 16px 50px rgba(14, 18, 29, 0.1);
   border: 1px solid #eee;
@@ -212,9 +212,9 @@
 
 @media (max-width: 991px) {
   .pageHeader {
-    height: 480px;
-    min-height: 480px;
-    padding-top: 100px;
+    height: auto;
+    min-height: 360px;
+    padding: 140px 0 60px;
   }
 
   .pageHeaderInner h3 {
@@ -244,7 +244,7 @@
 
   .mapCol,
   .map {
-    min-height: 340px;
+    min-height: 280px;
   }
 
   .formWrap {
@@ -254,9 +254,8 @@
 
 @media (max-width: 767px) {
   .pageHeader {
-    height: 420px;
-    min-height: 420px;
-    padding-top: 90px;
+    min-height: 300px;
+    padding: 120px 0 48px;
   }
 }
 

@@ -10,7 +10,6 @@ const offerings = [
   {
     title: "Feasibility Studies",
     icon: "icon-planning",
-    accent: true,
     text: "This service offers valuable insights to clients embarking on new projects. We delve deep into the project's potential, analyzing various factors such as site conditions, regulatory requirements, risk analysis, and feasibility testing to provide clients with a clear understanding of the project's viability and potential challenges. We empower our clients to make informed decisions, mitigate risks, and optimize outcomes through our industry expertise.",
   },
   {
@@ -45,10 +44,7 @@ export default function Offerings() {
         </div>
         <div className={styles.grid}>
           {offerings.map((item) => (
-            <article
-              key={item.title}
-              className={`${styles.item}${"accent" in item ? ` ${styles.itemAccent}` : ""}`}
-            >
+            <article key={item.title} className={styles.item}>
               <span className={`${styles.icon} ${item.icon}`} />
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.text}>{item.text}</p>

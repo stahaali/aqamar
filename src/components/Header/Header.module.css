@@ -4,12 +4,12 @@
   left: 0;
   right: 0;
   z-index: 999;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .headerSticky {
   position: fixed;
-  background: #fff;
+  background: var(--builza-primary);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   animation: slideDown 0.35s ease;
 }
@@ -129,7 +129,7 @@
 }
 
 .social a:hover {
-  background: #fff;
+  background: var(--builza-primary);
   color: var(--builza-base);
   border-color: #fff;
 }
@@ -141,7 +141,7 @@
 }
 
 .socialFacebook:hover {
-  background: #fff !important;
+  background: var(--builza-primary) !important;
   color: #1877f2 !important;
   border-color: #fff !important;
 }
@@ -153,19 +153,21 @@
 }
 
 .socialYelp:hover {
-  background: #fff !important;
+  background: var(--builza-primary) !important;
   color: #d32323 !important;
   border-color: #fff !important;
 }
 
 .nav {
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .navInner {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 28px;
   min-height: 100px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -175,22 +177,35 @@
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .logo img {
   width: auto;
   height: 110px;
   object-fit: contain;
+  display: block;
 }
 
 .menu {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-left: 0;
+  gap: 32px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0eee6 100%);
+  border: 1px solid rgba(14, 18, 29, 0.08);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 6px rgba(14, 18, 29, 0.06),
+    0 10px 24px rgba(14, 18, 29, 0.12),
+    0 2px 4px rgba(14, 18, 29, 0.06);
+  transform: perspective(800px) translateZ(12px);
+  z-index: 1;
 }
 
 .menu li {
@@ -198,17 +213,18 @@
 }
 
 .menu a {
-  font-size: 18px;
+  font-size: 17px;
   display: flex;
   align-items: center;
   color: var(--builza-black);
   position: relative;
-  transition: all 500ms ease;
+  transition: color 0.35s ease, transform 0.35s ease, text-shadow 0.35s ease;
   font-weight: 600;
   text-transform: capitalize;
   line-height: 20px;
   font-family: var(--builza-font-two), "Exo", sans-serif;
   letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .menu a::before {
@@ -228,6 +244,10 @@
 
 .menu li:hover a {
   color: var(--builza-base);
+  transform: translateY(-2px);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px rgba(255, 94, 20, 0.25);
 }
 
 .menu li:hover a::before,
@@ -244,7 +264,10 @@
   display: flex;
   align-items: center;
   gap: 22px;
-  margin-left: auto;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-left: 0;
 }
 
 .navRight :global(.thmBtn):hover {
@@ -266,6 +289,7 @@
 .contactStack {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -351,6 +375,31 @@
   .contactStack {
     display: none;
   }
+
+  .navRight {
+    display: none;
+  }
+
+  .navInner {
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 72px;
+  }
+
+  .menu {
+    gap: 14px;
+    padding: 10px 16px;
+    flex-shrink: 1;
+    min-width: 0;
+    transform: none;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -361,6 +410,8 @@
   .menuBtn {
     display: flex;
     margin-left: auto;
+    position: relative;
+    z-index: 3;
   }
 
   .navRight {
@@ -374,12 +425,15 @@
     left: 0;
     right: 0;
     margin-left: 0;
-    background: #fff;
+    background: var(--builza-primary);
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     gap: 16px;
+    border-radius: 0;
+    border: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: none;
     display: none;
   }
 
@@ -388,6 +442,8 @@
   }
 
   .navInner {
+    display: flex;
+    justify-content: flex-start;
     position: relative;
     min-height: 90px;
     gap: 16px;

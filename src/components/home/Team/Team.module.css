@@ -19,7 +19,7 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--builza-primary);
   border-radius: 10px;
   overflow: hidden;
   text-align: center;

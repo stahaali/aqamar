@@ -1,7 +1,7 @@
 .section {
   position: relative;
   padding: 100px 0 110px;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .grid {
@@ -18,7 +18,7 @@
   flex-direction: column;
   min-height: 320px;
   padding: 40px 36px 36px;
-  background: #fff;
+  background: var(--builza-primary);
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
   overflow: hidden;
@@ -27,8 +27,9 @@
 }
 
 .card:hover {
-  background: #fafafa;
+  background: var(--builza-base);
   z-index: 1;
+  box-shadow: 0 16px 50px rgba(255, 94, 20, 0.28);
 }
 
 .top {
@@ -50,8 +51,11 @@
   transition: color 0.35s ease;
 }
 
-.card:hover .icon {
-  color: var(--builza-base);
+.card:hover .icon,
+.card:hover .title,
+.card:hover .text,
+.card:hover .count {
+  color: var(--builza-white);
 }
 
 .count {
@@ -60,6 +64,7 @@
   line-height: 1;
   color: #d9d9d9;
   font-family: var(--builza-font-two);
+  transition: color 0.35s ease;
 }
 
 .title {
@@ -71,6 +76,7 @@
   max-width: 280px;
   position: relative;
   z-index: 1;
+  transition: color 0.35s ease;
 }
 
 .text {
@@ -82,6 +88,7 @@
   flex: 1;
   position: relative;
   z-index: 1;
+  transition: color 0.35s ease;
 }
 
 .shape {

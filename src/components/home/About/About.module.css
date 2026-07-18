@@ -6,7 +6,7 @@
 }
 
 .plainBg {
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .plainBg .left {
@@ -191,6 +191,14 @@
   font-size: 18px;
 }
 
+.title {
+  margin-bottom: 22px;
+}
+
+.title span {
+  color: var(--builza-base);
+}
+
 .text {
   margin-bottom: 28px;
   font-size: 18px;
@@ -284,12 +292,7 @@
   }
 
   .topShape {
-    right: 20px;
-    opacity: 0.5;
-  }
-
-  .topShape img {
-    max-width: 90px;
+    display: none;
   }
 
   .left {
@@ -307,19 +310,13 @@
   }
 
   .imgBox {
-    margin-bottom: 120px;
+    margin-bottom: 40px;
   }
 
-  .shape1 {
-    left: 0;
-    width: 200px;
-    height: 160px;
-  }
-
-  .img2 {
-    left: 0;
-    max-width: 200px;
-    top: 168px;
+  .shape1,
+  .img2,
+  .experience {
+    display: none;
   }
 }
 
@@ -328,24 +325,12 @@
     margin-bottom: 0;
   }
 
-  .img2 {
-    display: none;
-  }
-
-  .topShape {
-    display: none;
-  }
-
-  .experience {
-    display: none;
-  }
-
   .verticalPair {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
   .verticalImg {
-    height: 280px;
+    height: 240px;
   }
 }

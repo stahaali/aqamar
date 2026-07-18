@@ -1,6 +1,6 @@
 .section {
   padding: 120px 0;
-  background: #fff;
+  background: var(--builza-primary);
 }
 
 .inner {
@@ -128,21 +128,31 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .left {
     grid-template-columns: 1fr;
   }
 
   .sideImg {
-    min-height: 260px;
+    min-height: 280px;
     border-radius: 10px 10px 0 0;
   }
 
   .formCard {
     border-radius: 0 0 10px 10px;
   }
+}
+
+@media (max-width: 767px) {
+  .sideImg {
+    min-height: 240px;
+  }
 
   .section {
     padding: 80px 0;
+  }
+
+  .right {
+    grid-template-columns: 1fr;
   }
 }

@@ -98,7 +98,7 @@
   height: 46px;
   margin-bottom: 16px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--builza-primary);
   color: var(--builza-black);
   font-size: 20px;
   line-height: 1;

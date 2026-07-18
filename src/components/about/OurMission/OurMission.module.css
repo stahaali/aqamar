@@ -36,6 +36,11 @@
   line-height: 1.25;
   color: var(--builza-black);
   margin: 0 0 18px;
+  font-family: var(--builza-font-two);
+}
+
+.title span {
+  color: var(--builza-base);
 }
 
 .text {

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Faq.module.css";
 
 const faqs = [
@@ -26,7 +25,7 @@ const faqs = [
       "Absolutely. We provide professional real estate consultancy, property buying, selling, investment guidance, and valuation services.",
   },
   {
-    question: "Do you prepare construction estimates and BOQs?",
+    question: "Do you prepare construction estimates and BOQs?", 
     answer:
       "Yes. We provide detailed cost estimates, Bills of Quantities (BOQs), material calculations, and project budgeting.",
   },
@@ -78,10 +77,9 @@ export default function Faq() {
             FAQ
             <span className={styles.tagLine} />
           </div>
-          <AnimatedTitle
-            className="sectionTitle"
-            text="Frequently Asked Questions"
-          />
+          <h2 className={`sectionTitle ${styles.title}`}>
+            Frequently Asked <span>Questions</span>
+          </h2>
         </div>
 
         <div className={styles.list}>

@@ -1,5 +1,4 @@
 import DistortHoverImage from "@/components/DistortHoverImage/DistortHoverImage";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./OurMission.module.css";
 
 export default function OurMission() {
@@ -16,11 +15,9 @@ export default function OurMission() {
           </div>
 
           <div className={styles.content}>
-            <AnimatedTitle
-              as="h2"
-              className={styles.title}
-              text="Our Mission"
-            />
+            <h2 className={styles.title}>
+              Our <span>Mission</span>
+            </h2>
             <p className={styles.text}>
               Real estate is our passion from selecting the right property as
               per your needs, to designing and building as per today&apos;s

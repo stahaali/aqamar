@@ -10,7 +10,7 @@
   --builza-gray: #4d5765;
   --builza-white: #ffffff;
   --builza-white-rgb: 255, 255, 255;
-  --builza-primary: #f7f4ed;
+  --builza-primary: #f6f4eb;
   --builza-bdr-color: #d4d4d4;
   --builza-bdr-radius: 10px;
   --container: 1320px;
@@ -42,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--builza-white);
+  background: var(--builza-primary);
   color: var(--builza-gray);
   font-family: var(--builza-font);
   font-size: 16px;
@@ -196,7 +196,7 @@ p {
 }
 
 .thmBtn:hover .btnIcon {
-  background-color: var(--builza-white);
+  background-color: var(--builza-primary);
   color: var(--builza-base);
 }
 
@@ -226,8 +226,14 @@ p {
   margin-bottom: 20px;
 }
 
+@media (max-width: 991px) {
+  .sectionTitle {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 767px) {
   .sectionTitle {
-    font-size: 34px;
+    font-size: 32px;
   }
 }

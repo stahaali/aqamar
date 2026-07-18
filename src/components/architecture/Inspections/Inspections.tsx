@@ -1,4 +1,3 @@
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Inspections.module.css";
 
 const inspections = [
@@ -52,13 +51,21 @@ export default function Inspections() {
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">Inspection Services</div>
-          <AnimatedTitle
-            className="sectionTitle"
-            text="Site Inspections That Protect Your Build"
-          />
+          <h2 className={`sectionTitle ${styles.headTitle}`}>
+            Inspected. <span>Verified.</span> Guaranteed.
+          </h2>
           <p className={styles.lead}>
-            From groundwork to final handover, our inspection team verifies
-            quality, safety, and code compliance at every critical stage.
+            Every successful project starts with a solid foundation of trust —
+            and that trust is built through rigorous engineering inspections and
+            uncompromising quality control. Our experienced team conducts
+            thorough structural reviews, code compliance checks, and on-site
+            inspections at every critical stage of construction, from groundwork
+            to final finishing. We identify potential issues before they become
+            costly problems, ensuring your project meets all safety regulations
+            and industry standards. Whether it&apos;s a residential addition,
+            commercial plaza, or custom home build, our engineering expertise
+            guarantees durability, safety, and long-term structural integrity —
+            giving you complete peace of mind from start to finish.
           </p>
         </div>
 

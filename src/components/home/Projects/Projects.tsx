@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Projects.module.css";
 
 const rowOne = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((n) => ({
@@ -53,10 +52,9 @@ export default function Projects() {
       <div className="container">
         <div className={styles.top}>
           <div className="sectionTag">Our Projects</div>
-          <AnimatedTitle
-            className="sectionTitle"
-            text="Completed Construction Projects"
-          />
+          <h2 className={`sectionTitle ${styles.title}`}>
+            Completed Construction <span>Projects</span>
+          </h2>
         </div>
       </div>
 

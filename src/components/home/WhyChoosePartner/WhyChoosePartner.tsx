@@ -30,7 +30,7 @@ export default function WhyChoosePartner() {
       <section className={styles.banner}>
         <div className={`container ${styles.bannerInner}`}>
           <div className={styles.bannerLeft}>
-            <p className={styles.eyebrow}>— Why Choose AQ</p>
+            <p className={styles.eyebrow}>— Why Choose AQ Engineering Services</p>
             <h2 className={styles.bannerTitle}>
               Your Trusted Engineering Partner
             </h2>
