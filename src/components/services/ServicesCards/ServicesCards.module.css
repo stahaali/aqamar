@@ -4,6 +4,19 @@
   background: var(--builza-primary);
 }
 
+.head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading {
+  margin-bottom: 0;
+}
+
+.heading span {
+  color: var(--builza-base);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

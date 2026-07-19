@@ -43,6 +43,11 @@ export default function ServicesCards() {
   return (
     <section className={styles.section}>
       <div className="container">
+        <div className={styles.head}>
+          <h2 className={`sectionTitle ${styles.heading}`}>
+            Our Experience is <span>ready for you</span>
+          </h2>
+        </div>
         <div className={styles.grid}>
           {cards.map((item) => (
             <article key={item.count} className={styles.card}>
