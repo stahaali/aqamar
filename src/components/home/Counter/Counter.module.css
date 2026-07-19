@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 120px 0 120px;
+  padding: 70px 0;
   background: var(--builza-base);
   overflow: hidden;
 }

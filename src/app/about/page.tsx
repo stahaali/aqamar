@@ -41,6 +41,13 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
+          <div className={styles.floatDecor} aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/images/about/compass.webp"
+              alt=""
+            />
+          </div>
         </section>
 
         <About plainBg />

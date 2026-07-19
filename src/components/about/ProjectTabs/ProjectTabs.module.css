@@ -1,11 +1,11 @@
 .section {
-  padding: 100px 0 120px;
+  padding: 60px 0 70px;
   background: var(--builza-primary);
 }
 
 .head {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .title {

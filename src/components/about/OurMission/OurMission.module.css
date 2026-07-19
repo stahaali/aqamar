@@ -1,6 +1,6 @@
 .mission {
   position: relative;
-  padding: 100px 0;
+  padding: 30px 0 50px;
   background: var(--builza-primary);
   overflow: hidden;
   z-index: 1;

@@ -35,6 +35,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         style={
           {
             "--builza-font": "var(--font-public-sans), sans-serif",

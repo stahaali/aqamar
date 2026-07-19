@@ -1,4 +1,3 @@
-import AnimatedTitle from "@/components/AnimatedTitle/AnimatedTitle";
 import styles from "./Offerings.module.css";
 
 const offerings = [
@@ -40,7 +39,7 @@ export default function Offerings() {
       <div className="container">
         <div className={styles.head}>
           <div className="sectionTag">What We Offer</div>
-          <AnimatedTitle className="sectionTitle" text="Offerings" />
+          <h2 className={`sectionTitle ${styles.heading}`}>Offerings</h2>
         </div>
         <div className={styles.grid}>
           {offerings.map((item) => (

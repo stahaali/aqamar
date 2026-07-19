@@ -1,11 +1,11 @@
 .blog {
-  padding: 120px 0;
+  padding: 70px 0;
   background: var(--builza-primary);
 }
 
 .head {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 
 .head :global(.sectionTag) {

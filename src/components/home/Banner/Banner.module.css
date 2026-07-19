@@ -479,7 +479,7 @@
   .banner {
     height: auto;
     min-height: min(100dvh, 720px);
-    padding: 120px 0 70px;
+    padding: 70px 0 50px;
   }
 
   .title {

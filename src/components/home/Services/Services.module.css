@@ -1,6 +1,6 @@
 .services {
   position: relative;
-  padding: 120px 0 120px;
+  padding: 70px 0;
   background: var(--builza-primary);
   overflow: hidden;
   z-index: 1;
@@ -22,7 +22,7 @@
 .head {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 50px;
+  margin: 0 auto 36px;
 }
 
 .head :global(.sectionTag) {

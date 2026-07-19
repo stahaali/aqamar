@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 0 0 120px;
+  padding: 0 0 70px;
   background: var(--builza-primary);
   overflow: hidden;
 }
@@ -8,7 +8,7 @@
 .head {
   text-align: center;
   max-width: 960px;
-  margin: 0 auto 56px;
+  margin: 0 auto 36px;
 }
 
 .head :global(.sectionTag) {
@@ -200,7 +200,7 @@
 
 @media (max-width: 991px) {
   .section {
-    padding: 0 0 90px;
+    padding: 0 0 50px;
   }
 
   .head {

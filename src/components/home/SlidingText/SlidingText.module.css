@@ -1,7 +1,9 @@
 .wrap {
   position: relative;
   display: block;
-  margin-top: -35px;
+  margin-top: -10px;
+  padding-top: 28px;
+  padding-bottom: 10px;
   z-index: 2;
   overflow: hidden;
   background: transparent;

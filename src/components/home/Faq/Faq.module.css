@@ -1,6 +1,6 @@
 .faq {
   position: relative;
-  padding: 120px 0;
+  padding: 70px 0;
   background: var(--builza-primary);
   overflow: hidden;
   z-index: 1;
@@ -38,7 +38,7 @@
   z-index: 1;
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 50px;
+  margin: 0 auto 36px;
 }
 
 .title span {

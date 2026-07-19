@@ -2,7 +2,7 @@
   position: relative;
   display: block;
   background-color: var(--builza-primary);
-  padding: 120px 0 90px;
+  padding: 70px 0 50px;
   counter-reset: count;
   overflow: hidden;
   z-index: 1;
@@ -45,7 +45,7 @@
 
 .head {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
   position: relative;
   z-index: 1;
 }
@@ -212,7 +212,7 @@
   }
 
   .process {
-    padding: 100px 0 70px;
+    padding: 60px 0 50px;
   }
 }
 

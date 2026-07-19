@@ -1,5 +1,5 @@
 .section {
-  padding: 0 0 120px;
+  padding: 0 0 70px;
   background: var(--builza-primary);
 }
 
@@ -112,7 +112,7 @@
 
 @media (max-width: 991px) {
   .section {
-    padding: 0 0 90px;
+    padding: 0 0 50px;
   }
 
   .title {
@@ -143,7 +143,7 @@
 
 @media (max-width: 767px) {
   .section {
-    padding: 0 0 90px;
+    padding: 0 0 50px;
   }
 
   .head {
