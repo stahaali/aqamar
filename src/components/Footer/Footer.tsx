@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IMG } from "@/lib/images";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
@@ -17,7 +16,7 @@ export default function Footer() {
       <div
         className={styles.bg}
         style={{
-          backgroundImage: `url(${IMG}/backgrounds/site-footer-bg.jpg)`,
+          backgroundImage: `url(/assets/images/footer/site-footer-bg.webp)`,
         }}
       />
       <div className={styles.top}>

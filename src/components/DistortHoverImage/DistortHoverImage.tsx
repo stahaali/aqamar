@@ -26,7 +26,7 @@ declare global {
 export default function DistortHoverImage({
   src,
   alt,
-  displacementSrc = "/assets/images/webgl/1.jpg",
+  displacementSrc = "/assets/images/webgl/1.webp",
   className,
   fill = false,
 }: DistortHoverImageProps) {

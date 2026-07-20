@@ -53,7 +53,7 @@ export default function Features() {
             <div className={styles.image}>
               <DistortHoverImage
                 src="/assets/images/1.webp"
-                alt="98 Shepherd Drive, Barrie Ontario"
+                alt="Historic and modern architecture across Toronto"
                 fill
               />
             </div>

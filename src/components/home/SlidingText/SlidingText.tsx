@@ -1,4 +1,3 @@
-import { IMG } from "@/lib/images";
 import styles from "./SlidingText.module.css";
 
 const items = [
@@ -20,7 +19,10 @@ export default function SlidingText() {
             <div key={`${text}-${i}`} className={styles.item}>
               <div className={styles.icon}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${IMG}/shapes/sliding-text-icon-1.png`} alt="" />
+                <img
+                  src="/assets/images/shapes/sliding-text-icon-1.webp"
+                  alt=""
+                />
               </div>
               <p className={styles.text} data-hover={text}>
                 {text}

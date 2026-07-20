@@ -27,7 +27,7 @@ export default function About({ plainBg = false }: AboutProps) {
               </div>
               <div className={styles.verticalImg}>
                 <DistortHoverImage
-                  src="/assets/images/about/2.jpg"
+                  src="/assets/images/about/2.webp"
                   alt="Construction site worker"
                   fill
                 />
