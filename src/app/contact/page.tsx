@@ -61,7 +61,9 @@ export default function ContactPage() {
 
         <section className={styles.info}>
           <div className="container">
-            <h2 className={styles.sectionTitle}>Our Contact Information</h2>
+            <h2 className={styles.sectionTitle}>
+              Our Contact <span>Information</span>
+            </h2>
             <div className={styles.infoGrid}>
               {infos.map((item) => (
                 <div key={item.title} className={styles.infoCard}>
@@ -95,11 +97,54 @@ export default function ContactPage() {
                 <iframe
                   title="Office location map"
                   className={styles.map}
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880!2d-79.6780124!3d43.7141956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6b4e8e722ee7%3A0xdc16cc6218766088!2sAbdul%20Qamar%20Design%20Engineer%20%26%20Realtor!5e0!3m2!1sen!2sca!4v1!5m2!1sen!2sca"
+                  src="https://www.google.com/maps?q=2565+Steeles+Avenue+East+Unit+11,+Brampton,+ON+L6T+4L6&z=15&output=embed"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
+                <div className={styles.mapCard}>
+                  <div className={styles.mapCardTop}>
+                    <div>
+                      <h3 className={styles.mapCardTitle}>
+                        Abdul Qamar Design Engineer &amp; Realtor
+                      </h3>
+                      <p className={styles.mapCardAddress}>
+                        2565 Steeles Ave E Ste. 11, Brampton, ON L6T 4L6
+                      </p>
+                    </div>
+                    <div className={styles.mapCardActions}>
+                      <a
+                        className={styles.mapCardBtn}
+                        href="https://maps.google.com/?q=2565+Steeles+Avenue+East+Unit+11,+Brampton,+ON+L6T+4L6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open in Google Maps"
+                      >
+                        <span className="fas fa-external-link-alt" />
+                      </a>
+                      <a
+                        className={styles.mapCardBtn}
+                        href="https://www.google.com/maps/dir/?api=1&destination=2565+Steeles+Avenue+East+Unit+11,+Brampton,+ON+L6T+4L6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Get directions"
+                      >
+                        <span className="fas fa-directions" />
+                      </a>
+                    </div>
+                  </div>
+                  <p className={styles.mapCardRating}>
+                    <span>5.0</span>
+                    <span className={styles.mapCardStar}>★</span>
+                    <a
+                      href="https://maps.google.com/?q=Abdul+Qamar+Design+Engineer+%26+Realtor"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      (10)
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className={styles.formWrap}>
                 <ContactForm />

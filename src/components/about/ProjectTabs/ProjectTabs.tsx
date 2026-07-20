@@ -1,30 +1,42 @@
+import Link from "next/link";
 import styles from "./ProjectTabs.module.css";
 
 const items = [
   {
     title: "Commercial Plaza",
-    text: "Full-service commercial plaza development — from site planning and permits to construction and final delivery. Our team manages every phase with precision, ensuring your project stays on schedule and within budget. We handle zoning, regulatory approvals, and construction quality control so you don't have to. Built to attract tenants, generate strong returns, and deliver long-term value for your investment.",
+    lead: "Full-service plaza development from site planning to final delivery.",
+    text: "Our team manages every phase with precision — zoning, permits, construction quality, and timelines — so your investment attracts tenants and delivers long-term value.",
     image: "/assets/images/architecture/commercial-plaza.webp",
   },
   {
     title: "Commercial Unit Development",
-    text: "Purpose-built commercial units designed for flexibility and growth in today's competitive market. Efficient layouts maximize usable space while quality finishes create a professional, lasting impression. Our dedicated project management ensures every phase runs smoothly, on time, and within budget. Tailored specifically to your business needs — from concept through final handover.",
+    lead: "Purpose-built units designed for flexibility and growth.",
+    text: "Efficient layouts maximize usable space while quality finishes create a lasting impression. From concept to handover, every phase stays on time and on budget.",
     image: "/assets/images/architecture/commercial-unit-development.webp",
   },
   {
     title: "Restaurants",
-    text: "Restaurant build-outs and renovations handled end-to-end, from initial concept through final walkthrough. Kitchen-ready spaces are designed to meet strict health and safety codes without compromising workflow efficiency. Every finish is selected to create the right ambiance and dining experience for your guests. We manage permits, contractors, and timelines so you can focus on opening your doors.",
+    lead: "Restaurant build-outs handled end-to-end, concept to walkthrough.",
+    text: "Kitchen-ready spaces meet health and safety codes without losing workflow. We manage permits, contractors, and timelines so you can focus on opening day.",
     image: "/assets/images/architecture/restaurants.webp",
   },
   {
     title: "Retail Stores",
-    text: "Retail store construction and fit-outs that put your brand front and center from the moment customers walk in. Smart floor plans are designed to guide customer flow naturally, encouraging exploration and boosting sales. Strong curb appeal and thoughtful storefront design make a lasting first impression on every passerby. We handle every detail — from layout to finishes — creating a space that truly represents your brand.",
+    lead: "Retail fit-outs that put your brand front and center.",
+    text: "Smart floor plans guide customer flow, while strong curb appeal makes a lasting first impression. Layout to finishes — a space that represents your brand.",
     image: "/assets/images/architecture/retail-stores.webp",
   },
   {
     title: "Recreation Centers",
-    text: "Recreation and community center projects delivered with durable construction built to withstand years of heavy public use. Functional space programming ensures the facility truly serves the needs of the community it's designed for. Careful attention to safety, accessibility, and code compliance is built into every phase of the project. The result is a long-lasting community asset that continues to deliver value for years to come.",
+    lead: "Community facilities built for years of heavy public use.",
+    text: "Space programming, safety, accessibility, and code compliance are built into every phase — creating a lasting community asset that delivers ongoing value.",
     image: "/assets/images/architecture/recreation-centers.webp",
+  },
+  {
+    title: "Interior Remodeling",
+    lead: "Transform outdated spaces into modern, functional interiors.",
+    text: "Complete remodeling with quality finishes tailored to your style and needs — kitchens, living areas, and commercial interiors built for lasting comfort and value.",
+    image: "/assets/images/about/about3.webp",
   },
 ];
 
@@ -43,19 +55,20 @@ export default function ProjectTabs() {
           </p>
         </div>
 
-        <div className={styles.list}>
-          {items.map((item, index) => (
-            <article
-              key={item.title}
-              className={`${styles.row} ${index % 2 === 1 ? styles.reverse : ""}`}
-            >
+        <div className={styles.grid}>
+          {items.map((item) => (
+            <article key={item.title} className={styles.card}>
               <div className={styles.media}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.image} alt={item.title} />
               </div>
-              <div className={styles.content}>
+              <div className={styles.body}>
                 <h3 className={styles.itemTitle}>{item.title}</h3>
+                <p className={styles.snippet}>{item.lead}</p>
                 <p className={styles.itemText}>{item.text}</p>
+                <Link href="/architecture" className={styles.link}>
+                  Learn more <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </article>
           ))}

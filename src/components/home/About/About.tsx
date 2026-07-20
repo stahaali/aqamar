@@ -1,4 +1,3 @@
-import { IMG } from "@/lib/images";
 import DistortHoverImage from "@/components/DistortHoverImage/DistortHoverImage";
 import styles from "./About.module.css";
 
@@ -41,27 +40,15 @@ export default function About({ plainBg = false }: AboutProps) {
               </div>
             </div>
           ) : (
-            <div className={styles.imgBox}>
-              <div className={styles.img}>
+            <div className={styles.heroMedia}>
+              <div className={styles.heroImage}>
                 <DistortHoverImage
-                  src="/assets/images/about/about-one-img-1.jpg"
-                  alt="About construction team"
+                  src="/assets/images/about/about-one-img-1.webp"
+                  alt="Architectural construction model"
+                  fill
                 />
               </div>
-              <div className={styles.img2}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${IMG}/resources/about-one-img-2.jpg`}
-                  alt="Construction site"
-                />
-              </div>
-              <div className={styles.experience}>
-                <div className={styles.experienceCount}>
-                  <h3>30</h3>
-                  <span>+</span>
-                </div>
-                <p className={styles.experienceText}>Years Of Experience</p>
-              </div>
+              <div className={styles.cornerBadge} aria-hidden="true" />
             </div>
           )}
         </div>

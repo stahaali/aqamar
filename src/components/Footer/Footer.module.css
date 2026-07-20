@@ -23,10 +23,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr auto auto;
+  gap: 48px 64px;
   align-items: start;
-  justify-content: start;
+  justify-content: end;
+}
+
+.about {
+  justify-self: start;
 }
 
 .logo {

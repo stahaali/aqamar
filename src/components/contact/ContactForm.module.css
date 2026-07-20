@@ -11,7 +11,7 @@
 .input,
 .textarea {
   width: 100%;
-  background: var(--builza-primary);
+  background: #e8eaed;
   border: 1px solid #cfcfcf;
   outline: none;
   font-size: 15px;
@@ -19,7 +19,7 @@
   color: var(--builza-black);
   border-radius: 4px;
   font-family: var(--builza-font);
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .input {

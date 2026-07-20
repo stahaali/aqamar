@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Exo, Public_Sans } from "next/font/google";
+import SocialSidebar from "@/components/SocialSidebar/SocialSidebar";
 import "./globals.css";
 
 const publicSans = Public_Sans({
@@ -43,6 +44,7 @@ export default function RootLayout({
           } as React.CSSProperties
         }
       >
+        <SocialSidebar />
         {children}
       </body>
     </html>

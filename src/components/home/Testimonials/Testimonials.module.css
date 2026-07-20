@@ -34,13 +34,8 @@
 
 .carousel :global(.swiper-slide) {
   height: auto;
-  opacity: 0.35;
-  transition: opacity 500ms ease;
-  box-sizing: border-box;
-}
-
-.carousel :global(.swiper-slide-active) {
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .single {

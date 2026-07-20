@@ -48,7 +48,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className={`${styles.header} ${sticky ? styles.headerSticky : ""}`}>
+    <header className={`${styles.header} ${sticky ? styles.headerSticky : ""} ${styles.headerOverHero}`}>
       <nav className={styles.nav}>
         <div className={`container ${styles.navInner}`}>
           <Link href="/" className={styles.logo}>

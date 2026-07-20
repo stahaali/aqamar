@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- House isometric -->
+  <g stroke="#8d6e4a" stroke-width="2" stroke-linejoin="round">
+    <path fill="#e53935" d="M24 56 L64 32 L104 56 L64 80 Z"/>
+    <path fill="#c62828" d="M104 56 L104 64 L64 88 L64 80 Z"/>
+    <path fill="#f0c14a" d="M34 62 L34 92 L64 110 L64 80 Z"/>
+    <path fill="#e8b923" d="M94 62 L94 92 L64 110 L64 80 Z"/>
+    <path fill="#f5f0e8" d="M54 86 L54 102 L64 108 L64 92 Z"/>
+    <path fill="#6d4c3d" d="M56 88 L56 100 L64 105 L64 93 Z"/>
+    <path fill="#f5f0e8" d="M72 78 L84 72 L84 84 L72 90 Z"/>
+    <path fill="#81d4fa" d="M74 80 L82 76 L82 82 L74 86 Z"/>
+  </g>
+</svg>

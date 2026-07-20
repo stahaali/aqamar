@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./WhyChoosePartner.module.css";
 
 const features = [
@@ -45,14 +44,14 @@ export default function WhyChoosePartner() {
       <section className={styles.featuresSection}>
         <div className={`container ${styles.featuresInner}`}>
           <div className={styles.media}>
-            <Image
-              src="/assets/images/003.webp"
-              alt="Engineering planning and blueprints"
-              width={620}
-              height={500}
-              className={styles.image}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className={styles.mediaImg}
+              src="/assets/images/why-choose-partner.webp"
+              alt="Engineers collaborating on architectural plans"
             />
           </div>
+
           <div className={styles.features}>
             {features.map((item) => (
               <div key={item.title} className={styles.feature}>

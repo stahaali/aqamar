@@ -57,18 +57,7 @@ export default function Features() {
                 fill
               />
             </div>
-            <div className={styles.experienceBadge} aria-hidden="true" />
-            <div className={styles.mediaCard}>
-              <div className={styles.mediaEyebrow}>Hello</div>
-              <h3 className={styles.mediaTitle}>
-                Welcome 98 Shepherd Drive, Barrie Ontario
-              </h3>
-              <p className={styles.mediaText}>
-                Home with 4 Bedroom 2 Story home fully built in 2024,
-                Easy access from Mapleview Drive East to Hwy 400 and Simco Lake
-                front
-              </p>
-            </div>
+            <div className={styles.cornerBadge} aria-hidden="true" />
           </div>
 
           <div className={styles.content}>

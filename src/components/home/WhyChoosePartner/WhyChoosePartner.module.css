@@ -40,7 +40,7 @@
   justify-self: end;
 }
 
-/* ===== Dark features block ===== */
+/* ===== Dark features block — image + 2x2 ===== */
 .featuresSection {
   position: relative;
   padding: 80px 0;
@@ -49,45 +49,52 @@
 
 .featuresInner {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px 48px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .media {
   position: relative;
-  width: 100%;
+  border-radius: var(--builza-bdr-radius);
   overflow: hidden;
-  border-radius: 12px;
+  min-height: 380px;
+  height: 100%;
+  background: #1a1d24;
 }
 
-.image {
+.mediaImg {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1.15 / 1;
+  height: 100%;
+  min-height: 380px;
   object-fit: cover;
-  border-radius: 12px;
+  object-position: center;
+  border-radius: var(--builza-bdr-radius);
 }
 
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
+  align-content: center;
 }
 
 .feature {
-  padding: 28px 24px;
+  padding: 28px 26px;
+}
+
+.feature:nth-child(odd) {
   border-right: 1px dashed rgba(255, 255, 255, 0.25);
+  padding-left: 0;
+}
+
+.feature:nth-child(even) {
+  padding-right: 0;
+}
+
+.feature:nth-child(-n + 2) {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
-}
-
-.feature:nth-child(2n) {
-  border-right: 0;
-}
-
-.feature:nth-child(n + 3) {
-  border-bottom: 0;
 }
 
 .icon {
@@ -122,8 +129,7 @@
 }
 
 @media (max-width: 991px) {
-  .bannerInner,
-  .featuresInner {
+  .bannerInner {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -133,8 +139,15 @@
     max-width: none;
   }
 
+  .featuresInner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
   .media {
-    max-width: 480px;
+    min-height: 320px;
+    aspect-ratio: 16 / 10;
+    height: auto;
   }
 }
 
@@ -147,14 +160,22 @@
     padding: 56px 0;
   }
 
+  .media {
+    min-height: 260px;
+  }
+
   .features {
     grid-template-columns: 1fr;
   }
 
   .feature {
-    border-right: 0;
+    border-right: 0 !important;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
     padding: 24px 0;
+  }
+
+  .feature:nth-child(-n + 2) {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
   }
 
   .feature:last-child {

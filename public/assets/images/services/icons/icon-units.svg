@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Multi-unit building -->
+  <g stroke="#8d6e4a" stroke-width="2" stroke-linejoin="round">
+    <path fill="#e53935" d="M30 40 L64 22 L98 40 L64 58 Z"/>
+    <path fill="#f0c14a" d="M30 40 L30 88 L64 106 L64 58 Z"/>
+    <path fill="#e8b923" d="M98 40 L98 88 L64 106 L64 58 Z"/>
+    <path fill="#f5f0e8" d="M40 52 L40 62 L50 68 L50 58 Z"/>
+    <path fill="#f5f0e8" d="M40 70 L40 80 L50 86 L50 76 Z"/>
+    <path fill="#81d4fa" d="M42 54 L42 60 L48 64 L48 58 Z"/>
+    <path fill="#81d4fa" d="M42 72 L42 78 L48 82 L48 76 Z"/>
+    <path fill="#f5f0e8" d="M72 48 L82 42 L82 52 L72 58 Z"/>
+    <path fill="#f5f0e8" d="M72 66 L82 60 L82 70 L72 76 Z"/>
+    <path fill="#81d4fa" d="M74 50 L80 46 L80 50 L74 54 Z"/>
+    <path fill="#81d4fa" d="M74 68 L80 64 L80 68 L74 72 Z"/>
+    <path fill="#6d4c3d" d="M56 88 L56 100 L64 105 L64 93 Z"/>
+  </g>
+</svg>

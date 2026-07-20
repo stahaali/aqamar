@@ -6,28 +6,17 @@
   z-index: 1;
 }
 
-.shapeLeft,
-.shapeRight {
+.shapeLeft {
   position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 420px;
   pointer-events: none;
   z-index: 0;
   line-height: 0;
 }
 
-.shapeLeft {
-  left: 0;
-  bottom: 0;
-  max-width: 420px;
-}
-
-.shapeRight {
-  right: 40px;
-  bottom: 20px;
-  max-width: 170px;
-}
-
-.shapeLeft img,
-.shapeRight img {
+.shapeLeft img {
   display: block;
   width: 100%;
   height: auto;
@@ -140,11 +129,6 @@
     max-width: 280px;
   }
 
-  .shapeRight {
-    max-width: 140px;
-    right: 16px;
-  }
-
   .question {
     font-size: 18px;
     padding: 22px 0;
@@ -156,8 +140,7 @@
     padding: 70px 0;
   }
 
-  .shapeLeft,
-  .shapeRight {
+  .shapeLeft {
     display: none;
   }
 
