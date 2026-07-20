@@ -36,41 +36,6 @@
   border-radius: var(--builza-bdr-radius);
 }
 
-.topShape {
-  position: absolute;
-  top: 0;
-  right: 90px;
-  z-index: 0;
-  pointer-events: none;
-  line-height: 0;
-}
-
-.topShape img {
-  display: block;
-  width: auto;
-  max-width: 160px;
-  height: auto;
-}
-
-.floatBobY {
-  animation-name: float-bob-y;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes float-bob-y {
-  0% {
-    transform: translateY(-30px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(-30px);
-  }
-}
-
 .inner {
   position: relative;
   z-index: 1;
@@ -88,42 +53,20 @@
 }
 
 .heroMedia {
-  --cut-w: 110px;
-  --cut-h: 90px;
   position: relative;
   width: 100%;
   height: 520px;
   overflow: hidden;
   border-radius: var(--builza-bdr-radius);
-  background: var(--builza-primary);
-}
-
-.heroImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: path(
-    "M 142 0 H 5000 V 5000 H 0 V 122 Q 0 104 18 104 H 106 Q 124 104 124 86 V 18 Q 124 0 142 0 Z"
-  );
-}
-
-.heroImage :global(img),
-.heroImage :global(canvas) {
-  object-fit: contain;
-  object-position: center;
   background: #fff;
 }
 
-.cornerBadge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: var(--cut-w);
-  height: var(--cut-h);
-  background: var(--builza-base);
-  border-radius: 12px;
+.heroMedia :global(img),
+.heroMedia :global(canvas) {
+  object-fit: contain;
+  object-position: center;
+  border-radius: var(--builza-bdr-radius);
+  background: #fff;
 }
 
 .title {
@@ -174,18 +117,6 @@
   .heroMedia {
     height: 480px;
   }
-
-  .topShape {
-    right: 30px;
-  }
-
-  .topShape img {
-    width: 70px;
-    max-width: 70px;
-    max-height: 140px;
-    height: auto;
-    object-fit: contain;
-  }
 }
 
 @media (max-width: 991px) {
@@ -195,10 +126,6 @@
 
   .about {
     padding: 80px 0;
-  }
-
-  .topShape {
-    display: none;
   }
 
   .left {
@@ -222,19 +149,7 @@
 
 @media (max-width: 576px) {
   .heroMedia {
-    --cut-w: 90px;
-    --cut-h: 74px;
     height: 300px;
-  }
-
-  .heroImage {
-    clip-path: path(
-      "M 114 0 H 5000 V 5000 H 0 V 98 Q 0 84 14 84 H 86 Q 100 84 100 70 V 14 Q 100 0 114 0 Z"
-    );
-  }
-
-  .cornerBadge {
-    border-radius: 10px;
   }
 
   .verticalPair {

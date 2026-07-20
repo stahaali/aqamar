@@ -14,12 +14,6 @@ export default function About({ plainBg = false }: AboutProps) {
       className={`${styles.about} ${plainBg ? styles.plainBg : ""}`}
       id="about"
     >
-      {!plainBg && (
-        <div className={`${styles.topShape} ${styles.floatBobY}`}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/images/about/shape.webp" alt="" />
-        </div>
-      )}
       <div className={`container ${styles.inner}`}>
         <div className={styles.left}>
           {plainBg ? (
@@ -41,14 +35,11 @@ export default function About({ plainBg = false }: AboutProps) {
             </div>
           ) : (
             <div className={styles.heroMedia}>
-              <div className={styles.heroImage}>
-                <DistortHoverImage
-                  src="/assets/images/about/about-one-img-1.webp"
-                  alt="Architectural construction model"
-                  fill
-                />
-              </div>
-              <div className={styles.cornerBadge} aria-hidden="true" />
+              <DistortHoverImage
+                src="/assets/images/about/about-one-img-1.webp"
+                alt="Architectural construction model"
+                fill
+              />
             </div>
           )}
         </div>

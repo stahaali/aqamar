@@ -36,7 +36,7 @@ const items = [
     title: "Interior Remodeling",
     lead: "Transform outdated spaces into modern, functional interiors.",
     text: "Complete remodeling with quality finishes tailored to your style and needs — kitchens, living areas, and commercial interiors built for lasting comfort and value.",
-    image: "/assets/images/about/about3.webp",
+    image: "/assets/images/architecture/interior-remodeling.webp",
   },
 ];
 
