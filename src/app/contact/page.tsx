@@ -15,7 +15,7 @@ const infos = [
   {
     icon: "icon-map",
     title: "Our Address",
-    lines: ["2565 Steels Ave, East Unit 11,", "Brampton, ON L6T 4L6"],
+    lines: ["2565 Steeles Ave East Unit 11,", "Brampton, ON, L6T 4L6, Canada"],
   },
   {
     icon: "icon-call",
@@ -109,7 +109,8 @@ export default function ContactPage() {
                         Abdul Qamar Design Engineer &amp; Realtor
                       </h3>
                       <p className={styles.mapCardAddress}>
-                        2565 Steels Ave, East Unit 11, Brampton, ON L6T 4L6
+                        2565 Steeles Ave East Unit 11, Brampton, ON, L6T 4L6,
+                        Canada
                       </p>
                     </div>
                     <div className={styles.mapCardActions}>
