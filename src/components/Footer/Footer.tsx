@@ -48,7 +48,7 @@ export default function Footer() {
             <ul className={styles.contact}>
               <li>
                 <span className={`${styles.contactIcon} icon-map`} />
-                <span>2565 Steeles Avenue East Unit 11, Brampton, ON, L6T 4L6</span>
+                <span>2565 Steels Ave, East Unit 11, Brampton, ON L6T 4L6</span>
               </li>
               <li>
                 <span className={`${styles.contactIcon} icon-call`} />
